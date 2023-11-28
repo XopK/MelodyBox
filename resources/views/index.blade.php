@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MelodyBox</title>
+    <script src="/script/flickity.pkgd.min.js"></script>
+    <link rel="stylesheet" href="/style/flickity.css">
     <x-links></x-links>
 </head>
 
@@ -29,9 +32,18 @@
             </div>
         </div>
         <h1 class="new-index-title">НОВЫЕ РЕЛИЗЫ</h1>
+        <h1 class="new-index-title">ВЫБЕРИ СВОЙ <span>ЖАНР</span></h1>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-3">
+            <div class="col">
+                <a href="">
+                    <div class="genres-card-index">
+                        <span>МилиРок</span>
+                    </div>
+                </a>
+            </div>
+        </div>
     </div>
+    <x-footer></x-footer>
 </body>
-
-
 
 </html>
