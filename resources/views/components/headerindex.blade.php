@@ -14,7 +14,7 @@
                     <a class="nav-link text-white" aria-current="page" href="#">Новые релизы</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Жанры</a>
+                    <a class="nav-link text-white" href="/genres">Жанры</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="#">Авторы</a>
