@@ -103,3 +103,9 @@ footer {
     border-radius: 15px;
     border: 1px solid var(--gradient, #F48A6E);
 }
+/* Отдельная страничка жанра */
+.colorHead{
+    width: 100%;
+    background-color: #67182F;
+    height: 294px;
+}

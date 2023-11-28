@@ -19,3 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('ordersNew', [OrderController::class, 'orderNew']);
+
+Route::get('/genres', function () {
+    return view('genres');
+});
