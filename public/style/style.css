@@ -90,3 +90,119 @@ footer {
     display: flex;
     gap: 20px;
 }
+/* Стили страницы автора */
+.section_author {
+    background-image: url('/img/man-light-dark-concert-singer-darkness-61422-pxhere 1.svg');
+    width: 100%;
+    height: 390px;
+}
+
+.cont-1 {
+    display: flex;
+    height: 390px;
+    align-items: flex-end;
+}
+
+.name_author {
+    width: 266px;
+    height: 250px;
+    background-color: #0C051E ;
+    color: #ffffff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+   
+}
+
+.name_author img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.name_author p {
+    margin: 0 auto;
+    font-size: 15px;
+}
+
+section {
+    background-color: #0C051E;
+}
+.releases {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.releases h2 {
+    color: #ffffff;
+}
+
+.releases hr {
+    color: #ffffff;
+    background-color: #ffffff;
+    height: 3px;
+    opacity: 1;
+}
+
+.releases_track {
+    height: 100%;
+}
+
+.track {
+   width: 100%;
+    height: 85px;
+    background-color: #000;
+    border-radius: 20px;
+    border: 4px solid #F48A6E;
+    color: #ffffff;
+    gap: 500px;
+}
+.text_track {
+    margin-left: 20px;
+}
+.text_track img {
+    width: 58px;
+    height: 58px;
+}
+
+.button {
+    border: 0;
+    background: transparent;
+    box-sizing: border-box;
+    width: 0;
+    height: 38px;
+    margin-left: 19px;
+    margin-top: 15px;
+  
+    border-color: transparent transparent transparent #ffffff;
+    transition: 100ms all ease;
+    cursor: pointer;
+  
+ 
+    border-style: solid;
+    border-width: 18px 0 20px  30px;
+  
+    &.paused {
+      border-style: double;
+      border-width: 0px 0 0px 30px;
+    }
+  
+    &:hover {
+      border-color: transparent transparent transparent #404040;
+    }
+  }
+
+  .button_border {
+    width: 70px;
+    height: 70px;
+ 
+    border-radius: 100%;
+    border:2px solid #ffffff
+  }
+
+  .button_points {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+  }

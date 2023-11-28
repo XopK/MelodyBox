@@ -19,7 +19,7 @@ background: linear-gradient(0deg, rgba(58,33,104,1) 0%, rgba(58,33,104,0.8239496
                     <a class="nav-link text-white" href="#">Жанры</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Авторы</a>
+                    <a class="nav-link text-white" href="/author">Авторы</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="#">Новые альбомы</a>
