@@ -1,9 +1,13 @@
 <nav class="navbar navbar-expand-lg">
     <div class="container-fluid mx-5">
-        <a class="navbar-brand d-flex align-items-center" href="#">
-            <img src="/img/logo.svg" alt="Logo" width="60" height="60" class="d-inline-block align-text-top me-2">
-            <div class="text-white">MelodyBox</div>
-        </a>
+        <div class="navbar-brand">
+            <a class="d-flex align-items-center" style="width: 180px" href="/">
+                <img src="/img/logo.svg" alt="Logo" width="60" height="60"
+                    class="d-inline-block align-text-top me-2">
+                <div class="text-white">MelodyBox</div>
+            </a>
+        </div>
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
             <span class="navbar-toggler-icon"></span>
@@ -14,7 +18,7 @@
                     <a class="nav-link text-white" aria-current="page" href="#">Новые релизы</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="/genres">Жанры</a>
+                    <a class="nav-link text-white" href="">Жанры</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="#">Авторы</a>

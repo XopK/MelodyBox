@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <x-links />
-    <title>Отдельная страничка жанра</title>
+    <x-links></x-links>
+    <title>Document</title>
 </head>
 <body>
     <x-header></x-header>
-    <div class="colorHead">
-        <h1>Рок</h1>
-    </div>
     <div class="container">
+        <div class="playlistGeneral">
+            <p>Плейлист</p>
+            <h1>Вершки и Корешки</h1>
+            <p>Егор Летов</p>
+            <p>Новые треки в MELODY BOX качестве каждую неделю.</p>
+            <button></button>
+            <button></button>
+        </div>
+        <hr>
         <div class="playlistGenre d-flex flex-column gap-4">
             <div class="d-flex track align-items-center">
                 <div class="d-flex gap-5 align-items-center text_track">
@@ -120,6 +126,6 @@
             </div>
         </div>
     </div>
- <x-footer></x-footer>
+    <x-footer></x-footer>
 </body>
 </html>

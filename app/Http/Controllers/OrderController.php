@@ -10,4 +10,16 @@ class OrderController extends Controller
     {
         return view('ordersNew');
     }
+    public function OrderDeny()
+    {
+        return view('ordersDeny');
+    }
+    public function OrderAccept()
+    {
+        return view('ordersAccept');
+    }
+    public function Authors()
+    {
+        return view('Authors');
+    }
 }

@@ -42,7 +42,7 @@
                 <table class="tableorders text-white">
                     <thead>
                         <tr>
-                            <th>Новые заявки</th>
+                            <th>Авторы</th>
                         </tr>
                         <tr>
                             <th>№</th>
@@ -50,6 +50,7 @@
                             <th>Псевдоним</th>
                             <th>Электронная почта</th>
                             <th>Жанр</th>
+                            <th>Ссылка на страницу</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -60,10 +61,8 @@
                             <td>Водказавр</td>
                             <td>@LexaKypu2@gmail.com</td>
                             <td>Рок</td>
-                            <td>
-                                <a href="" class="accept mx-1">Принять</a>
-                                <a href="" class="deny mx-1">Отклонить</a>
-                            </td>
+                            <td>Ссылка</td>
+                            <td><a href="" class="text-danger">Удалить автора</a></td>
                         </tr>
                     </tbody>
                 </table>
