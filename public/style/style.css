@@ -4,6 +4,11 @@
     list-style: none;
 }
 
+a {
+    text-decoration: none !important;
+    color: white !important;
+}
+
 body {
     background-color: #0C051E;
 }
@@ -214,8 +219,8 @@ section {
 
 /* index */
 
-.index-big-title{
-    background: linear-gradient(90deg, #F48A6E 0%, #EA5369 60.05%, #F234F5 120.11%);
+.index-big-title {
+    background: var(--gradient, linear-gradient(90deg, #F48A6E 0%, #EA5369 60.05%, #F234F5 120.11%));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -223,7 +228,7 @@ section {
     font-weight: 700;
 }
 
-.bg-index{
+.bg-index {
     background-image: url(/img/back-index.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -231,7 +236,7 @@ section {
     height: 100vh;
 }
 
-.bg-index-block{
+.bg-index-block {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -246,25 +251,26 @@ section {
     position: relative;
 }
 
-.gallery-cell:hover{
+.gallery-cell:hover {
     background: linear-gradient(90deg, #f48a6e 0%, #ea5369 50%, #f234f5 100%);
+    transform: scale(1);
 }
 
-.gallery-cell img{
+.gallery-cell img {
     width: 100%;
     height: 100%;
 }
 
-.flickity-button{
+.flickity-button {
     background-color: rgba(0, 0, 0, 0.5);
     transition: 0.3s ease-in-out;
 }
 
-.flickity-button:hover{
+.flickity-button:hover {
     background-color: rgba(0, 0, 0, 0.25);
 }
 
-.new-index-title{
+.new-index-title {
     color: white;
     font-size: 40px;
     margin: 40px auto;
@@ -272,24 +278,16 @@ section {
     text-align: center;
 }
 
-.new-index-title span{
-    background: linear-gradient(90deg, #F48A6E 0%, #EA5369 60.05%, #F234F5 120.11%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 900;
-}
-
-.flickity-button-icon{
+.flickity-button-icon {
     fill: #F4452E;
 }
 
-.flickity-prev-next-button{
+.flickity-prev-next-button {
     width: 80px;
     height: 80px;
 }
 
-.gallery-cell-text-block{
+.gallery-cell-text-block {
     position: absolute;
     width: calc(100% - 8px);
     height: 20%;
@@ -298,7 +296,7 @@ section {
     margin-bottom: 4px;
 }
 
-.gallery-cell-text-block p{
+.gallery-cell-text-block p {
     color: white;
     text-align: center;
     margin: 12px 0 5px 0;
@@ -306,7 +304,7 @@ section {
     font-weight: 600;
 }
 
-.gallery-cell-text-block span{
+.gallery-cell-text-block span {
     font-size: 15px;
     display: block;
     color: white;
@@ -314,7 +312,111 @@ section {
     font-weight: 500;
 }
 
-.genres-card-index{
+/* end index */
+
+/* index */
+
+.index-big-title {
+    background: linear-gradient(90deg, #F48A6E 0%, #EA5369 60.05%, #F234F5 120.11%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.bg-index {
+    background-image: url(/img/back-index.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.bg-index-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 86px);
+}
+
+.gallery-cell {
+    width: 400px;
+    height: 400px;
+    margin-right: 45px;
+    padding: 4px;
+    position: relative;
+}
+
+.gallery-cell:hover {
+    background: linear-gradient(90deg, #f48a6e 0%, #ea5369 50%, #f234f5 100%);
+}
+
+.gallery-cell img {
+    width: 100%;
+    height: 100%;
+}
+
+.flickity-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in-out;
+}
+
+.flickity-button:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.new-index-title {
+    color: white;
+    font-size: 40px;
+    margin: 40px auto;
+    font-weight: 700;
+    text-align: center;
+}
+
+.new-index-title span {
+    background: linear-gradient(90deg, #F48A6E 0%, #EA5369 60.05%, #F234F5 120.11%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+}
+
+.flickity-button-icon {
+    fill: #F4452E;
+}
+
+.flickity-prev-next-button {
+    width: 80px;
+    height: 80px;
+}
+
+.gallery-cell-text-block {
+    position: absolute;
+    width: calc(100% - 8px);
+    height: 20%;
+    background-color: rgba(0, 0, 0, 0.75);
+    bottom: 0;
+    margin-bottom: 4px;
+}
+
+.gallery-cell-text-block p {
+    color: white;
+    text-align: center;
+    margin: 12px 0 5px 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.gallery-cell-text-block span {
+    font-size: 15px;
+    display: block;
+    color: white;
+    text-align: center;
+    font-weight: 500;
+}
+
+.genres-card-index {
     width: 100%;
     height: 130px;
     background-color: #ff0048;
@@ -324,13 +426,13 @@ section {
     border-radius: 10px;
 }
 
-.genres-card-index span{
+.genres-card-index span {
     color: white;
     font-size: 30px;
     font-weight: 700;
 }
 
-.col a{
+.col a {
     text-decoration: none;
 }
 
@@ -339,12 +441,32 @@ section {
 
 .menu {
     width: 270px;
-    height: 273px;
+    height: 278px;
     border-radius: 15px;
     border: 1px solid var(--gradient, #F48A6E);
 }
+
+.authors {
+    background: rgb(244, 138, 110);
+    background: linear-gradient(90deg, rgba(244, 138, 110, 1) 0%, rgba(234, 83, 105, 1) 42%, rgba(242, 52, 245, 1) 100%);
+}
+
+.hr1 {
+    height: 1px;
+    background: rgb(244, 138, 110);
+    background: linear-gradient(90deg, rgba(244, 138, 110, 1) 0%, rgba(234, 83, 105, 1) 42%, rgba(242, 52, 245, 1) 100%);
+}
+
+.menu p {
+    color: white;
+}
+
+.table {
+    max-width: 77% !important;
+}
+
 /* Отдельная страничка жанра */
-.colorHead{
+.colorHead {
     width: 100%;
     background-color: #67182F;
     height: 294px;
