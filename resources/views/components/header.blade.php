@@ -1,9 +1,13 @@
-<nav class="navbar navbar-expand-lg" style="background: linear-gradient(180deg, rgba(58,33,104,1) 0%, rgba(12,5,30,1) 100%);">
+<nav class="navbar navbar-expand-lg"
+    style="background: linear-gradient(180deg, rgba(58,33,104,1) 0%, rgba(12,5,30,1) 100%);">
     <div class="container-fluid mx-5">
-        <a class="navbar-brand d-flex align-items-center" href="/">
-            <img src="/img/logo.svg" alt="Logo" width="60" height="60" class="d-inline-block align-text-top me-2">
-            <div class="text-white">MelodyBox</div>
-        </a>
+        <div class="navbar-brand">
+            <a class="d-flex align-items-center" style="width: 180px" href="/">
+                <img src="/img/logo.svg" alt="Logo" width="60" height="60"
+                    class="d-inline-block align-text-top me-2">
+                <div class="text-white">MelodyBox</div>
+            </a>
+        </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
             <span class="navbar-toggler-icon"></span>
