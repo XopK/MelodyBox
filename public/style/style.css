@@ -466,8 +466,16 @@ section {
 }
 
 /* Отдельная страничка жанра */
-.colorHead {
+.colorHead  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     background-color: #67182F;
     height: 294px;
+}
+
+.colorHead>h1 {
+    color: white;
+    font-size: 60px;
 }
