@@ -1,0 +1,92 @@
+* {
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+.authorization {
+    color: #ffffff;
+    font-weight: 600
+}
+
+.authorization form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.authorization p {
+    background: linear-gradient(90deg, #F48A6E 0%, #EA5369 50.05%, #F234F5 90.11%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #0B2349;
+    font-weight: 800;
+}
+
+.authorization1 label {
+    align-items: left;
+}
+
+.modal-content {
+    background: #0C051E;
+}
+
+.modal {
+    --bs-modal-width: 900px;
+}
+
+.form-text {
+    color: white;
+    background: #0C051E;
+    border: none;
+    border-bottom: 1px solid var(--gradient, #F48A6E);
+    width: 50%;
+}
+
+.button-form {
+    padding: 5px 57px 5px 57px;
+    border-radius: 27px;
+    border: 2px solid var(--gradient, #F48A6E);
+    color: #ffffff;
+    background: #0C051E;
+}
+
+nav {
+    font-weight: 800;
+}
+
+.navbar-brand {
+    flex-grow: 1;
+}
+
+.collapse {
+    flex-grow: 1;
+}
+
+.icon-excel {
+    background-image: url('/img/search.svg');
+    padding-left: 36px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-repeat: no-repeat;
+}
+
+.icon-excel1 {
+    background-image: url('/img/user.svg');
+    padding-left: 36px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-repeat: no-repeat;
+}
+
+footer {
+    background-color: #000;
+    padding: 20px 60px;
+    font-weight: 800;
+}
+
+.footer-ul {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+}
