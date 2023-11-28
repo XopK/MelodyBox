@@ -13,16 +13,16 @@
 
 <body>
     <div class="bg-index">
-        <x-headerindex></x-headerindex>
+        <x-header></x-header>
         <div class="container bg-index-block">
-            <h1 class="index-big-title">Музыка - это стенограмма эмоций</h1>
+            <h1 class="index-big-title" >Музыка - это стенограмма эмоций</h1>
         </div>
     </div>
     <div class="container">
         <h1 class="new-index-title">НОВЫЕ АЛЬБОМЫ</h1>
         <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
             <div class="gallery-cell">
-                <a href="">
+                <a href="/playlist">
                     <img src="/img/habib.png" alt="">
                     <div class="gallery-cell-text-block">
                         <p>Егор Летов</p>
