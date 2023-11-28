@@ -33,11 +33,11 @@ crossorigin="anonymous"></script>
             <h2>Релизы</h2>
             <hr>
                 <div class="releases_track d-flex flex-column gap-4">
-                    <div class="d-flex track align-items-center "> 
+                    <div class="d-flex track align-items-center ">
                         <div class="d-flex gap-5 align-items-center text_track">
-                    <span style="font-size: 40px;">1</span> 
-                    <img src="/img/avaauth.svg"> 
-                     <span style="font-size: 24px;">Пустите меня на танцпол</span> 
+                    <span style="font-size: 40px;">1</span>
+                    <img src="/img/avaauth.svg">
+                     <span style="font-size: 24px;">Пустите меня на танцпол</span>
                      <span style="font-size: 12px;">HammAli & Navai</span>
                         </div>
                         <div class="d-flex gap-2 align-items-center">
@@ -48,11 +48,11 @@ crossorigin="anonymous"></script>
                         </div>
                     </div>
 
-                    <div class="d-flex track align-items-center "> 
+                    <div class="d-flex track align-items-center ">
                         <div class="d-flex gap-5 align-items-center text_track">
-                    <span style="font-size: 40px;">1</span> 
-                    <img src="/img/avaauth.svg"> 
-                     <span style="font-size: 24px;">Пустите меня на танцпол</span> 
+                    <span style="font-size: 40px;">1</span>
+                    <img src="/img/avaauth.svg">
+                     <span style="font-size: 24px;">Пустите меня на танцпол</span>
                      <span style="font-size: 12px;">HammAli & Navai</span>
                         </div>
                         <div class="d-flex gap-2 align-items-center">
@@ -63,11 +63,11 @@ crossorigin="anonymous"></script>
                         </div>
                     </div>
 
-                    <div class="d-flex track align-items-center "> 
+                    <div class="d-flex track align-items-center ">
                         <div class="d-flex gap-5 align-items-center text_track">
-                    <span style="font-size: 40px;">1</span> 
-                    <img src="/img/avaauth.svg"> 
-                     <span style="font-size: 24px;">Пустите меня на танцпол</span> 
+                    <span style="font-size: 40px;">1</span>
+                    <img src="/img/avaauth.svg">
+                     <span style="font-size: 24px;">Пустите меня на танцпол</span>
                      <span style="font-size: 12px;">HammAli & Navai</span>
                         </div>
                         <div class="d-flex gap-2 align-items-center">
@@ -78,11 +78,11 @@ crossorigin="anonymous"></script>
                         </div>
                     </div>
 
-                    <div class="d-flex track align-items-center "> 
+                    <div class="d-flex track align-items-center ">
                         <div class="d-flex gap-5 align-items-center text_track">
-                    <span style="font-size: 40px;">1</span> 
-                    <img src="/img/avaauth.svg"> 
-                     <span style="font-size: 24px;">Пустите меня на танцпол</span> 
+                    <span style="font-size: 40px;">1</span>
+                    <img src="/img/avaauth.svg">
+                     <span style="font-size: 24px;">Пустите меня на танцпол</span>
                      <span style="font-size: 12px;">HammAli & Navai</span>
                         </div>
                         <div class="d-flex gap-2 align-items-center">
@@ -93,11 +93,11 @@ crossorigin="anonymous"></script>
                         </div>
                     </div>
 
-                    <div class="d-flex track align-items-center "> 
+                    <div class="d-flex track align-items-center ">
                         <div class="d-flex gap-5 align-items-center text_track">
-                    <span style="font-size: 40px;">1</span> 
-                    <img src="/img/avaauth.svg"> 
-                     <span style="font-size: 24px;">Пустите меня на танцпол</span> 
+                    <span style="font-size: 40px;">1</span>
+                    <img src="/img/avaauth.svg">
+                     <span style="font-size: 24px;">Пустите меня на танцпол</span>
                      <span style="font-size: 12px;">HammAli & Navai</span>
                         </div>
                         <div class="d-flex gap-2 align-items-center">
@@ -108,11 +108,11 @@ crossorigin="anonymous"></script>
                         </div>
                     </div>
 
-                    <div class="d-flex track align-items-center "> 
+                    <div class="d-flex track align-items-center ">
                         <div class="d-flex gap-5 align-items-center text_track">
-                    <span style="font-size: 40px;">1</span> 
-                    <img src="/img/avaauth.svg"> 
-                     <span style="font-size: 24px;">Пустите меня на танцпол</span> 
+                    <span style="font-size: 40px;">1</span>
+                    <img src="/img/avaauth.svg">
+                     <span style="font-size: 24px;">Пустите меня на танцпол</span>
                      <span style="font-size: 12px;">HammAli & Navai</span>
                         </div>
                         <div class="d-flex gap-2 align-items-center">
@@ -133,9 +133,18 @@ crossorigin="anonymous"></script>
             <div class="container">
                 <h2></h2>
                 <hr>
-                    <div>
-                    <div></div>
-                    <div></div>
+                    <div class="row row-cols-1 row-cols-xl-3 g-3">
+                        <div class="col">
+                            <div class="author-album">
+                                <a href="">
+                                    <img src="/img/habib.png" alt="">
+                                    <div class="author-album-text-block">
+                                        <p>Егор Летов</p>
+                                        <span>Вершки и корешки</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
             </div>
         </section>
