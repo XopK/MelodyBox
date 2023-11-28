@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
-Route::get('/author', [MainController::class, 'author']);
+Route::get('/author', [MainController::class, 'author'])->name("author");
 
 Route::get('ordersNew', [OrderController::class, 'orderNew']);
 Route::get('ordersDeny', [OrderController::class, 'orderDeny']);
@@ -31,4 +31,7 @@ Route::get('/genres', function () {
 
 Route::get('/personal_area', function () {
     return view('personal_area');
+});
+Route::get('/playlist', function () {
+    return view('playlist');
 });

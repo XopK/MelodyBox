@@ -21,7 +21,7 @@
                     <a class="nav-link text-white" href="">Жанры</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="/author">Авторы</a>
+                    <a class="nav-link text-white" href="{{route("author")}}">Авторы</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="#">Новые альбомы</a>
