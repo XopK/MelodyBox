@@ -37,7 +37,7 @@
             <div class="col">
                 <a href="">
                     <div class="genres-card-index">
-                        <span>МилиРок</span>
+                        <a href="/genres"><span>МилиРок</span></a>
                     </div>
                 </a>
             </div>

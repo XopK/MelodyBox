@@ -206,6 +206,7 @@ section {
 .button_border {
     width: 70px;
     height: 70px;
+
     border-radius: 100%;
     border:2px solid #ffffff
 }
@@ -521,4 +522,7 @@ section {
 .colorHead>h1 {
     color: white;
     font-size: 60px;
+}
+.playlistGenre{
+    margin: 80px 0 80px 0;
 }
