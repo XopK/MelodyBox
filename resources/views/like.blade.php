@@ -23,15 +23,33 @@ crossorigin="anonymous"></script>
 
 
     <x-header/>
-    <section class="section_author">
+    <section class="section_like">
         <div class="container cont-1">
-            <div class="name_author d-flex flex-column justify-content-center  gap-3"> <img src="/img/avaauth.svg" alt="аватарка автора"> <p class="fw-bold">Имя автора </p></div>
+           <div class="d-flex align-items-center">
+                <img src="/img/like_img.svg" alt="Обложка мой плейлист">
+           <div class="text_like">
+            <span>Плейлист</span>
+            <h2 class="fw-bold">Мой плейлист</h2>
+                <div class="d-flex gap-3">
+                    <div class="play_click d-flex ">
+                   
+
+                      
+                    <button class='button_like' onclick="showAlert"></button>
+                     <p>Слушать</p>
+                    </div>
+                    <button class="button_points_like">• • •</button>
+                </div>
+           </div>
+           </div>
         </div>
     </section>
         <section>
             <div class="container releases">
-            <h2>Релизы</h2>
-            <hr>
+                        <div class="add_block">
+                            <button><img></button>
+                            <p>Добавить трек</p>
+                        </div>
                 <div class="releases_track d-flex flex-column gap-4">
                     <div class="d-flex track align-items-center ">
                         <div class="d-flex gap-5 align-items-center text_track">
@@ -55,35 +73,21 @@ crossorigin="anonymous"></script>
                 </div>
             </div>
         </section>
-        <section>
-
-            <div class="container releases" >
-                <h2>Альбомы</h2>
-                <hr>
-                    <div class="row row-cols-1 row-cols-xl-3 g-3">
-                        <div class="col">
-                            <div class="author-album">
-                                <a href="">
-                                    <img src="/img/habib.png" alt="">
-                                    <div class="author-album-text-block">
-                                        <p>Егор Летов</p>
-                                        <span>Вершки и корешки</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                     
-
-
-                    </div>
-            </div>
-        </section>
+      
 <x-footer/>
 </body>
 
 <script>
     $(document).ready(function showAlert(btn) {
   var btn = $(".button");
+  btn.click(function() {
+    btn.toggleClass("paused");
+    return false;
+  });
+});
+
+$(document).ready(function showAlert(btn) {
+  var btn = $(".button_like");
   btn.click(function() {
     btn.toggleClass("paused");
     return false;
