@@ -25,3 +25,7 @@ Route::get('ordersNew', [OrderController::class, 'orderNew']);
 Route::get('/genres', function () {
     return view('genres');
 });
+
+Route::get('/personal_area', function () {
+    return view('personal_area');
+});

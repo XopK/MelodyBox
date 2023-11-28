@@ -1,6 +1,4 @@
-<nav class="navbar navbar-expand-lg"
-    style="background: rgb(58,33,104);
-background: linear-gradient(0deg, rgba(58,33,104,1) 0%, rgba(58,33,104,0.8239496482186625) 100%);">
+<nav class="navbar navbar-expand-lg" style="background: linear-gradient(180deg, rgba(58,33,104,1) 0%, rgba(12,5,30,1) 100%);">
     <div class="container-fluid mx-5">
         <a class="navbar-brand d-flex align-items-center" href="/">
             <img src="/img/logo.svg" alt="Logo" width="60" height="60" class="d-inline-block align-text-top me-2">
