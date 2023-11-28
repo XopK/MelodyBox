@@ -60,6 +60,7 @@ crossorigin="anonymous"></script>
             <div class="container releases" >
                 <h2>Альбомы</h2>
                 <hr>
+<<<<<<< Updated upstream
                     <div class="row row-cols-1 row-cols-xl-3 g-3">
                         <div class="col">
                             <div class="author-album">
@@ -75,6 +76,15 @@ crossorigin="anonymous"></script>
                      
 
 
+=======
+                    <div>
+                        <div>
+                        
+
+                        
+                    </div>
+                    <div></div>
+>>>>>>> Stashed changes
                     </div>
             </div>
         </section>
