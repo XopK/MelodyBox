@@ -18,9 +18,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
-Route::get('/author',[MainController::class,'author']);
+Route::get('/author', [MainController::class, 'author']);
 
 Route::get('ordersNew', [OrderController::class, 'orderNew']);
+Route::get('ordersDeny', [OrderController::class, 'orderDeny']);
+Route::get('ordersAccept', [OrderController::class, 'orderAccept']);
+Route::get('Authors', [OrderController::class, 'Authors']);
 
 Route::get('/genres', function () {
     return view('genres');
