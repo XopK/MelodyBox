@@ -42,13 +42,26 @@ crossorigin="anonymous"></script>
                         </div>
                         <div class="d-flex gap-2 align-items-center">
                             <div class="button_border">
-                        <button class='button' onclick="showAlert"></button>
+                        <button class='button'></button>
                         </div>
                             <button class="button_points">• • • </button>
                         </div>
                     </div>
 
-
+                    <div class="d-flex track align-items-center ">
+                        <div class="d-flex gap-5 align-items-center text_track">
+                    <span style="font-size: 40px;">1</span>
+                    <img src="/img/avaauth.svg">
+                     <span style="font-size: 24px;">Пустите меня на танцпол</span>
+                     <span style="font-size: 12px;">HammAli & Navai</span>
+                        </div>
+                        <div class="d-flex gap-2 align-items-center">
+                            <div class="button_border">
+                        <button class='button'></button>
+                        </div>
+                            <button class="button_points">• • • </button>
+                        </div>
+                    </div>
 
 
 
@@ -60,7 +73,6 @@ crossorigin="anonymous"></script>
             <div class="container releases" >
                 <h2>Альбомы</h2>
                 <hr>
-<<<<<<< Updated upstream
                     <div class="row row-cols-1 row-cols-xl-3 g-3">
                         <div class="col">
                             <div class="author-album">
@@ -76,7 +88,6 @@ crossorigin="anonymous"></script>
                      
 
 
-=======
                     <div>
                         <div>
                         
@@ -84,7 +95,6 @@ crossorigin="anonymous"></script>
                         
                     </div>
                     <div></div>
->>>>>>> Stashed changes
                     </div>
             </div>
         </section>
@@ -92,12 +102,8 @@ crossorigin="anonymous"></script>
 </body>
 
 <script>
-    $(document).ready(function showAlert(btn) {
-  var btn = $(".button");
-  btn.click(function() {
-    btn.toggleClass("paused");
-    return false;
-  });
-});
+    $(".button").click(function(){
+        $(this).toggleClass("paused");
+    })
 </script>
 </html>
