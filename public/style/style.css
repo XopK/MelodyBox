@@ -169,7 +169,7 @@ section {
     border: 4px solid #F48A6E;
     color: #ffffff;
     gap: 500px;
-    transition: background-color 1s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
 }
 .track:hover {
     /* background-color: linear-gradient(90deg, #F48A6E 0%, #EA5369 50%, #F234F5 100%); */
