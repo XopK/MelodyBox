@@ -32,9 +32,6 @@ crossorigin="anonymous"></script>
             <h2 class="fw-bold">Мой плейлист</h2>
                 <div class="d-flex gap-3">
                     <div class="play_click d-flex ">
-                   
-
-                      
                     <button class='button_like' onclick="showAlert"></button>
                      <p>Слушать</p>
                     </div>
@@ -88,7 +85,7 @@ crossorigin="anonymous"></script>
                 </div>
             </div>
         </section>
-      
+
 <x-footer/>
 </body>
 

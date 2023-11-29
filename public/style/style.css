@@ -175,7 +175,7 @@ section {
     /* background-color: linear-gradient(90deg, #F48A6E 0%, #EA5369 50%, #F234F5 100%); */
     border: 4px solid #F48A6E;
     background-color: #ea5369;
-    
+
 }
 
 .text_track {
@@ -229,7 +229,7 @@ section {
     outline: none; /* Для синий ободки */
     border: 0;
     background: transparent;
-    
+
 }
 
 .author-album {
@@ -578,7 +578,6 @@ td {
     font-size: 60px;
 }
 /* страница пользовательского плейлиста */
-
 .section_like {
     background-image: url('/img/like.svg');
     width: 100%;
@@ -586,7 +585,6 @@ td {
 }
 
 .section_like img {
-
     width: 300px;
     height: 300px;
 }
@@ -657,7 +655,7 @@ border-radius: 38px;
 
 }
 .add_block button {
-  
+
         display:inline-block;
         width:50px;
         height:50px;
@@ -670,7 +668,7 @@ border-radius: 38px;
         background-position:center;
         background-size: 50% 2px,2px 50%; /*thickness = 2px, length = 50% (25px)*/
         background-repeat:no-repeat;
-    
+
 }
 
 .add_block button:active {
@@ -687,7 +685,7 @@ border-radius: 38px;
       background-size: 50% 2px,2px 50%; /*thickness = 2px, length = 50% (25px)*/
       background-repeat:no-repeat;
 }
-  
+
 .playlistGenre{
     margin: 80px 0 80px 0;
 }
@@ -744,4 +742,18 @@ border-radius: 38px;
     background: linear-gradient(90deg, #F48A6E 0%, #EA5369 50%, #F234F5 100%);
 }
 /* Страница плейлиста */
+.playlistGeneral{
+    margin-top: 20px;
 
+}
+.playlistText p{
+    color:white;
+}
+.playlistText{
+    margin-left: 20px;
+    color:white;
+}
+.playlistHead{
+    display: flex;
+    align-items: center;
+}
