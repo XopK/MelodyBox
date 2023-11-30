@@ -13,13 +13,13 @@
                     <a href="" class="nav-link text-white">Пользовательские соглашения</a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link text-white">Справка</a>
+                    <button href="" class="nav-link text-white">Справка</a>
                 </li>
                 <li class="nav-item">
                     <a href="" class="nav-link text-white">Поддержка </a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link text-white">Стать автором</a>
+                    <a class="nav-link text-white" data-bs-toggle="modal" data-bs-target="#Artist">Стать автором</a>
                 </li>
                 <li class="nav-item">
                     <a href="" class="nav-link text-white">Следите за нами в:</a>
@@ -34,10 +34,11 @@
                     <a href="" class="nav-link text-white"><img src="img/VK.svg" alt="vk"></a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link text-white">Электронная почта: melodybox1@gmai.com</a>
+                    <a href="" class="nav-link text-white">Электронная почта: melodybox1@gmail.com</a>
                 </li>
             </ul>
 
         </div>
     </div>
 </footer>
+<x-artist></x-artist>
