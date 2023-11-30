@@ -13,9 +13,9 @@
 
 <body>
     <div class="bg-index">
-        <x-header></x-header>
+        <x-headerindex></x-headerindex>
         <div class="container bg-index-block">
-            <h1 class="index-big-title" >Музыка - это стенограмма эмоций</h1>
+            <h1 class="index-big-title">Музыка - это стенограмма эмоций</h1>
         </div>
     </div>
     <div class="container">

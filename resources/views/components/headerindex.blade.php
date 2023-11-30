@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid mx-5">
+    <div class="container-fluid">
         <div class="navbar-brand">
             <a class="d-flex align-items-center" style="width: 180px" href="/">
                 <img src="/img/logo.svg" alt="Logo" width="60" height="60"
@@ -45,10 +45,10 @@
                     <i class="icon-excel1"></i>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="/authorization">Вход</a></li>
-                    <li><a class="dropdown-item" href="/registration">Регистрация</a></li>
-                    <li><a class="dropdown-item" href="/settings">Настройка</a></li>
-                    <li><a class="dropdown-item" href="#">Выход</a></li>
+                    <li class="text-danger"><a class="dropdown-item" href="/authorization">Вход</a></li>
+                    <li class="text-danger"><a class="dropdown-item" href="/registration">Регистрация</a></li>
+                    <li class="text-danger"><a class="dropdown-item" href="/settings">Настройка</a></li>
+                    <li class="text-danger"><a class="dropdown-item" href="#">Выход</a></li>
                 </ul>
             </div>
         </div>
