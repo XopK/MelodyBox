@@ -35,7 +35,7 @@
                     <a href="" class="nav-link text-white"><img src="img/VK.svg" alt="vk"></a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link text-white">Электронная почта: melodybox1@gmail.com</a>
+                    <p class="nav-link text-white mt-3">Электронная почта: melodybox1@gmail.com</p>
                 </li>
             </ul>
 

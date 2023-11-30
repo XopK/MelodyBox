@@ -46,7 +46,7 @@ crossorigin="anonymous"></script>
         </div>
     </section>
         <hr>
-        <div class="playlistGenre d-flex flex-column gap-4">
+        <div class="playlistGenre container d-flex flex-column gap-4 m-auto">
             <div class="d-flex track align-items-center">
                 <div class="d-flex gap-5 align-items-center text_track">
             <span style="font-size: 40px;">1</span>
