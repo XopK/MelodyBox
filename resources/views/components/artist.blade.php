@@ -1,10 +1,10 @@
-<div class="modal fade modal-sm-6" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade modal-sm-6" id="Artist" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body">
                 <div class="authorization">
 
-                    <p class="text-center fs-1" style="">Вход</p>
+                    <p class="text-center fs-1" style="">Анкета автора</p>
 
                     <form action="" class="fs-4">
 
