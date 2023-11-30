@@ -13,6 +13,8 @@ body {
     background-color: #0C051E;
 }
 
+/* Header */
+
 .authorization {
     color: #ffffff;
     font-weight: 600
@@ -107,6 +109,12 @@ nav {
     background-repeat: no-repeat;
 }
 
+.button-form:hover {
+    background: linear-gradient(90deg, #F48A6E 0%, #EA5369 50.05%, #F234F5 90.11%)
+}
+
+/* Footer */
+
 footer {
     margin-top: 30px;
     background-color: #000;
@@ -118,6 +126,10 @@ footer {
     align-items: center;
     display: flex;
     gap: 20px;
+}
+
+.nav-fix {
+    cursor: pointer;
 }
 
 /* Стили страницы автора */
@@ -656,7 +668,6 @@ td {
     border-color: transparent transparent transparent #ffffff;
     transition: 100ms all ease;
     cursor: pointer;
-
 
     border-style: solid;
     border-width: 18px 0 20px 30px;

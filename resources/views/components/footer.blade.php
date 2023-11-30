@@ -19,7 +19,8 @@
                     <a href="" class="nav-link text-white">Поддержка </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" data-bs-toggle="modal" data-bs-target="#Artist">Стать автором</a>
+                    <a class="nav-fix nav-link text-white" data-bs-toggle="modal" data-bs-target="#Artist">Стать
+                        автором</a>
                 </li>
                 <li class="nav-item">
                     <a href="" class="nav-link text-white">Следите за нами в:</a>
