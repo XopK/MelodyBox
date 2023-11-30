@@ -19,9 +19,6 @@
                         <label for="email-form" class="form-label">Электронная почта</label>
                         <input type="email" class="form-text mt-1" id="email-form">
 
-                        <label for="date-form" class="form-label">Дата рождения</label>
-                        <input type="date" class="form-text mt-1" id="date-form">
-
                         <label for="password-form" class="form-label">Пароль</label>
                         <input type="password" class="form-text mt-1" id="password-form">
 

@@ -18,13 +18,22 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
-Route::get('/author', function() {
-    return view ("author"); })->name('author');
+Route::get('/author', function () {
+    return view('author');
+})->name('author');
 
-Route::get('ordersNew', [OrderController::class, 'orderNew']);
-Route::get('ordersDeny', [OrderController::class, 'orderDeny']);
-Route::get('ordersAccept', [OrderController::class, 'orderAccept']);
-Route::get('Authors', [OrderController::class, 'Authors']);
+Route::get('admin', function () {
+    return view('admin.index');
+});
+Route::get('admin/OrdersNew', function () {
+    return view('admin.ordersNew');
+});
+Route::get('admin/OrdersAccept', function () {
+    return view('admin.OrdersAccept');
+});
+Route::get('admin/OrdersDeny', function () {
+    return view('admin.ordersDeny');
+});
 
 Route::get('/genres', function () {
     return view('genres');
