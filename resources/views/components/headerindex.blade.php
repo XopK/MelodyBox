@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
+    <div class="container-fluid mx-5">
         <div class="navbar-brand">
             <a class="d-flex align-items-center" style="width: 180px" href="/">
                 <img src="/img/logo.svg" alt="Logo" width="60" height="60"
@@ -39,18 +39,27 @@
                     </ul>
                 </div>
             </div>
-            <div class="dropdown">
-                <button class="btn btn-medium" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    <i class="icon-excel1"></i>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li class="text-danger"><a class="dropdown-item" href="/authorization">Вход</a></li>
-                    <li class="text-danger"><a class="dropdown-item" href="/registration">Регистрация</a></li>
-                    <li class="text-danger"><a class="dropdown-item" href="/settings">Настройка</a></li>
-                    <li class="text-danger"><a class="dropdown-item" href="#">Выход</a></li>
-                </ul>
-            </div>
+            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight"><i class="icon-excel1"></i></button>
+
+
         </div>
     </div>
 </nav>
+<div class="offcanvas offcanvas-end text-white" style="background-color: #0C051E" tabindex="-1" id="offcanvasRight"
+    aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">Здравствуй, NAME</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <li><button class="btn btn-outline-primary mt-2" data-bs-toggle="modal"
+                data-bs-target="#Authorization">Вход</button></li>
+        <li><button class="btn btn-outline-primary mt-2" data-bs-toggle="modal"
+                data-bs-target="#Registration">Регистрация</button></li>
+        <li><button class="btn btn-outline-primary mt-2">Настройка</button></li>
+        <li><button class="btn btn-outline-primary mt-2">Выход</button></li>
+    </div>
+</div>
+<x-registration></x-registration>
+<x-authorization></x-authorization>
