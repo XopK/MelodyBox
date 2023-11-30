@@ -29,7 +29,7 @@
                         <button type="submit" class="button-form mt-3">Создать аккаунт</button>
                     </form>
 
-                    <div class="d-flex justify-content-center fs-4 mt-1">Есть аккаунт? <p><a href="">Войдите!</a>
+                    <div class="d-flex justify-content-center fs-4 mt-1">Есть аккаунт? <p><a data-bs-toggle="modal" data-bs-target="#Authorization">Войдите!</a>
                         </p>
                     </div>
 

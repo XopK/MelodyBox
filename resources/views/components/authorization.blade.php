@@ -17,8 +17,7 @@
                         <button type="submit" class="button-form mt-3">Войти</button>
                     </form>
 
-                    <div class="d-flex justify-content-center fs-4 mt-1">Нету аккаунта? <p><a
-                                href="">Зарегистрируетесь!</a>
+                    <div class="d-flex justify-content-center fs-4 mt-1">Нету аккаунта? <p><a data-bs-toggle="modal" data-bs-target="#Registration">Зарегистрируетесь!</a>
                         </p>
                     </div>
 

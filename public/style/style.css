@@ -26,6 +26,10 @@ body {
     flex-direction: column;
 }
 
+.authorization a{
+    cursor:pointer;
+}
+
 .authorization p {
     background: linear-gradient(90deg, #F48A6E 0%, #EA5369 50.05%, #F234F5 90.11%);
     -webkit-background-clip: text;
