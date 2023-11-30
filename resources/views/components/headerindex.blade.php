@@ -41,24 +41,27 @@
             </div>
             <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
                 aria-controls="offcanvasRight"><i class="icon-excel1"></i></button>
-
-
         </div>
     </div>
 </nav>
 <div class="offcanvas offcanvas-end text-white" style="background-color: #0C051E" tabindex="-1" id="offcanvasRight"
     aria-labelledby="offcanvasRightLabel">
     <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasRightLabel">Здравствуй, NAME</h5>
+        <h5 class="offcanvas-title d-flex" id="offcanvasRightLabel">Здравствуй, <p>NAME</p>
+        </h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-        <li><button class="btn btn-outline-primary mt-2" data-bs-toggle="modal"
-                data-bs-target="#Authorization">Вход</button></li>
-        <li><button class="btn btn-outline-primary mt-2" data-bs-toggle="modal"
-                data-bs-target="#Registration">Регистрация</button></li>
-        <li><button class="btn btn-outline-primary mt-2">Настройка</button></li>
-        <li><button class="btn btn-outline-primary mt-2">Выход</button></li>
+        <div class="hr1"></div>
+        <li><button class="btn-modal py-2" data-bs-toggle="modal" data-bs-target="#Authorization">Вход</button></li>
+        <div class="hr1"></div>
+        <li><button class="btn-modal py-2" data-bs-toggle="modal" data-bs-target="#Registration">Регистрация</button>
+        </li>
+        <div class="hr1"></div>
+        <li><button class="btn-modal py-2">Настройка</button></li>
+        <div class="hr1"></div>
+        <li><button class="btn-modal py-2">Выход</button></li>
+        <div class="hr1"></div>
     </div>
 </div>
 <x-registration></x-registration>
