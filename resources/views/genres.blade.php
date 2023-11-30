@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <x-links />
+    <script src="https://code.jquery.com/jquery-2.2.4.js"
+integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+crossorigin="anonymous">    </script>
+
     <title>Отдельная страничка жанра</title>
 </head>
 <body>
@@ -120,6 +124,7 @@
             </div>
         </div>
     </div>
+    <script src="script/script.js"></script>
  <x-footer></x-footer>
 </body>
 </html>

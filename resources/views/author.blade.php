@@ -14,6 +14,7 @@
 src="https://code.jquery.com/jquery-2.2.4.js"
 integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
 crossorigin="anonymous"></script>
+<script src="script/script.js"></script>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
@@ -101,9 +102,5 @@ crossorigin="anonymous"></script>
 <x-footer/>
 </body>
 
-<script>
-    $(".button").click(function(){
-        $(this).toggleClass("paused");
-    })
-</script>
+<script src="script/script.js"></script>
 </html>

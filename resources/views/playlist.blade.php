@@ -15,6 +15,7 @@ src="https://code.jquery.com/jquery-2.2.4.js"
 integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
 crossorigin="anonymous"></script>
 
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
 <link rel="stylesheet" href="/style/style.css">
@@ -150,6 +151,7 @@ crossorigin="anonymous"></script>
             </div>
         </div>
     </div>
+    <script src="script/script.js"></script>
     <x-footer></x-footer>
 </body>
 </html>
