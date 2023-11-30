@@ -21,6 +21,7 @@ crossorigin="anonymous"></script>
 </head>
 <body>
     <x-header></x-header>
+    <section class="section_like">
     <div class="container">
         <div class="playlistGeneral">
             <div class="playlistHead">
@@ -42,6 +43,7 @@ crossorigin="anonymous"></script>
                 </div>
             </div>
         </div>
+    </section>
         <hr>
         <div class="playlistGenre d-flex flex-column gap-4">
             <div class="d-flex track align-items-center">
