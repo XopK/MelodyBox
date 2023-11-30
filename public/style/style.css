@@ -581,6 +581,11 @@ td {
     border: 1px solid var(--gradient, #F48A6E);
     background: #0C051E;
 }
+.accept:hover{
+    transition:1s;
+    background: rgb(244, 138, 110);
+    background: linear-gradient(90deg, rgba(244, 138, 110, 1) 0%, rgba(234, 83, 105, 1) 42%, rgba(242, 52, 245, 1) 100%);
+}
 
 .deny {
     padding: 3px 30px;
