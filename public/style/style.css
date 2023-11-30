@@ -171,6 +171,7 @@ section {
     gap: 500px;
     transition: background-color 0.2s ease-in-out;
 }
+
 .track:hover {
     /* background-color: linear-gradient(90deg, #F48A6E 0%, #EA5369 50%, #F234F5 100%); */
     border: 4px solid #F48A6E;
@@ -226,7 +227,8 @@ section {
     background-color: none;
     color: #ffffff;
     border: none;
-    outline: none; /* Для синий ободки */
+    outline: none;
+    /* Для синий ободки */
     border: 0;
     background: transparent;
 
@@ -501,7 +503,7 @@ section {
 
 .menu {
     width: 270px;
-    height: 278px;
+    height: 260px;
     border-radius: 15px;
     border: 1px solid var(--gradient, #F48A6E);
 }
@@ -519,6 +521,10 @@ section {
 
 .menu p {
     color: white;
+}
+
+.umenu p {
+    margin-bottom: 0 !important;
 }
 
 .ta {
@@ -563,6 +569,9 @@ td {
     background: rgb(244, 138, 110);
     background: linear-gradient(90deg, rgba(244, 138, 110, 1) 0%, rgba(234, 83, 105, 1) 42%, rgba(242, 52, 245, 1) 100%);
 }
+
+/* endadmin */
+
 /* Отдельная страничка жанра */
 .colorHead {
     display: flex;
@@ -577,6 +586,7 @@ td {
     color: white;
     font-size: 60px;
 }
+
 /* страница пользовательского плейлиста */
 .section_like {
     background-image: url('/img/like.svg');
@@ -603,8 +613,8 @@ td {
     border: 1px solid #ffffff;
     width: 185px;
     background-color: #000;
-height: 55px;
-border-radius: 38px;
+    height: 55px;
+    border-radius: 38px;
 
 }
 
@@ -630,15 +640,15 @@ border-radius: 38px;
 
 
     border-style: solid;
-    border-width: 18px 0 20px  30px;
+    border-width: 18px 0 20px 30px;
 
     &.paused {
-      border-style: double;
-      border-width: 0px 0 0px 30px;
+        border-style: double;
+        border-width: 0px 0 0px 30px;
     }
 
     &:hover {
-      border-color: transparent transparent transparent #404040;
+        border-color: transparent transparent transparent #404040;
     }
 }
 
@@ -648,81 +658,86 @@ border-radius: 38px;
     border: 1px solid #ffffff;
     border-radius: 100%;
 }
+
 .add_block {
     text-align: center;
     color: #ffffff;
     padding-bottom: 20px;
 
 }
+
 .add_block button {
 
-        display:inline-block;
-        width:50px;
-        height:50px;
-        border-radius:50%;
-        border: 1px solid #ffffff;
-        background:
-          linear-gradient(#fff,#fff),
-          linear-gradient(#fff,#fff),
-          #0C051E;
-        background-position:center;
-        background-size: 50% 2px,2px 50%; /*thickness = 2px, length = 50% (25px)*/
-        background-repeat:no-repeat;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    background:
+        linear-gradient(#fff, #fff),
+        linear-gradient(#fff, #fff),
+        #0C051E;
+    background-position: center;
+    background-size: 50% 2px, 2px 50%;
+    /*thickness = 2px, length = 50% (25px)*/
+    background-repeat: no-repeat;
 
 }
 
 .add_block button:active {
-    display:inline-block;
-    width:50px;
-    height:50px;
-    border-radius:50%;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     border: 1px solid #ffffff;
     background:
-      linear-gradient(#000000,#000000),
-      linear-gradient(#000000,#000000),
-      #f3f3f3;
-      background-position:center;
-      background-size: 50% 2px,2px 50%; /*thickness = 2px, length = 50% (25px)*/
-      background-repeat:no-repeat;
+        linear-gradient(#000000, #000000),
+        linear-gradient(#000000, #000000),
+        #f3f3f3;
+    background-position: center;
+    background-size: 50% 2px, 2px 50%;
+    /*thickness = 2px, length = 50% (25px)*/
+    background-repeat: no-repeat;
 }
 
-.playlistGenre{
+.playlistGenre {
     margin: 50px 0 50px 0;
 }
 
 /* personal_area */
 
-.personal-area-title{
+.personal-area-title {
     color: #FFF;
     text-align: center;
     font-size: 48px;
     font-weight: 600;
 }
 
-.persoanl-area-container{
+.persoanl-area-container {
     width: 100%;
     display: flex;
 }
 
-.persoanl-area-container-navigation{
+.persoanl-area-container-navigation {
     width: 20%;
     margin: 0 auto;
 }
 
-.personal-nav-ul{
+.personal-nav-ul {
     padding: 0;
     width: 100%;
 }
 
-.p-n-first{
+.p-n-first {
     border-radius: 15px 15px 0 0;
 }
-.p-n-last{
+
+.p-n-last {
     border-radius: 0 0 15px 15px;
 }
 
 
-.personal-nav{
+.personal-nav {
     background-color: #0C051E;
     padding: 10px;
     color: white;
@@ -731,12 +746,12 @@ border-radius: 38px;
     border: 1px solid #F48A6E;
 }
 
-.personal-nav:hover{
+.personal-nav:hover {
     background: linear-gradient(90deg, #F48A6E 0%, #EA5369 50%, #F234F5 100%);
     cursor: pointer;
 }
 
-.personal-profile{
+.personal-profile {
     width: 78%;
     height: 250px;
     margin: 0 auto;
@@ -809,24 +824,27 @@ border-radius: 38px;
     color: #FFF;
     font-size: 18px;
     height: 40px;
-    background-color: rgb(59, 59, 59)0%
+    background-color: rgb(59, 59, 59)0%;
     border: none;
     outline: none;
 }
 
 /* Страница плейлиста */
-.playlistGeneral{
+.playlistGeneral {
     margin-top: 20px;
 
 }
-.playlistText p{
-    color:white;
+
+.playlistText p {
+    color: white;
 }
-.playlistText{
+
+.playlistText {
     margin-left: 20px;
-    color:white;
+    color: white;
 }
-.playlistHead{
+
+.playlistHead {
     display: flex;
     align-items: center;
 }
