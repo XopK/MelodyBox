@@ -20,7 +20,20 @@
                 </ul>
             </div>
             <div class="personal-profile">
-
+                <h2 class="personal-info-title">Персональные данные</h2>
+                <div class="bg-personal-area">
+                    <div class="bg-personal-area-left">
+                        <div class="bg-personal-area-left-img">
+                            <img src="/img/egorletov.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="bg-personal-area-center">
+                        <p>Егор Летов</p>
+                    </div>
+                    <div class="bg-personal-area-right">
+                        <button>Редактировать</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

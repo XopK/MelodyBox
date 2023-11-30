@@ -715,7 +715,7 @@ td {
 
 .persoanl-area-container {
     width: 100%;
-    display: flex
+    display: flex;
 }
 
 .persoanl-area-container-navigation {
@@ -753,8 +753,80 @@ td {
 
 .personal-profile {
     width: 78%;
+    height: 250px;
     margin: 0 auto;
     background: linear-gradient(90deg, #F48A6E 0%, #EA5369 50%, #F234F5 100%);
+    border-radius: 15px 15px 0 0;
+}
+
+.bg-personal-area{
+    background: url(/img/personal-back.jpg);
+    width: 99.5%;
+    height: 200px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.personal-info-title{
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 10px;
+    margin: 0;
+}
+
+.bg-personal-area-left{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.bg-personal-area-left-img{
+    width: 170px;
+    height: 170px;
+    border-radius: 100%;
+    background: linear-gradient(90deg, #F48A6E 0%, #EA5369 50%, #F234F5 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-personal-area-left-img img{
+    width: 164px;
+    height: 164px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.bg-personal-area-center{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.bg-personal-area-center p{
+    margin: 0 10px;
+    color: #FFF;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.bg-personal-area-right{
+    width: 15%;
+    height: 100%;
+}
+
+.bg-personal-area-right button{
+    width: 100%;
+    color: #FFF;
+    font-size: 18px;
+    height: 40px;
+    background-color: rgb(59, 59, 59)0%;
+    border: none;
+    outline: none;
 }
 
 /* Страница плейлиста */
