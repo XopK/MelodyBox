@@ -48,3 +48,7 @@ Route::get('/personal_area', function () {
 Route::get('/playlist', function () {
     return view('playlist');
 });
+
+Route::get('/album_create', function () {
+    return view('album_create');
+});

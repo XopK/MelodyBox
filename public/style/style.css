@@ -775,14 +775,6 @@ td {
     margin: 0;
 }
 
-.bg-personal-area-left{
-    width: 25%;
-    height: 100%;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-}
-
 .bg-personal-area-left-img{
     width: 170px;
     height: 170px;
@@ -791,6 +783,8 @@ td {
     display: flex;
     align-items: center;
     justify-content: center;
+    border: none;
+    transition: 0.2s ease-in-out;
 }
 
 .bg-personal-area-left-img img{
@@ -801,10 +795,11 @@ td {
 }
 
 .bg-personal-area-center{
-    width: 60%;
+    width: 80%;
     height: 100%;
     display: flex;
     align-items: center;
+    margin: 0 auto;
 }
 
 .bg-personal-area-center p{
@@ -814,19 +809,30 @@ td {
     font-weight: 600;
 }
 
-.bg-personal-area-right{
-    width: 15%;
-    height: 100%;
+.personal_form_label{
+    padding-left: 5px;
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 600;
 }
 
-.bg-personal-area-right button{
+.personal_form_input{
     width: 100%;
-    color: #FFF;
-    font-size: 18px;
-    height: 40px;
-    background-color: rgb(59, 59, 59)0%;
-    border: none;
     outline: none;
+    border: none;
+    border-bottom: #f48a6e 1px solid;
+    background: none;
+    color: white;
+    padding: 5px 5px 0 5px;
+    transition: 0.4s ease-in-out;
+}
+
+.personal_form_input:focus{
+    border-color: #F234F5;
+}
+
+.personal-bottom-area{
+    margin-top: 14px;
 }
 
 /* Страница плейлиста */
