@@ -1,7 +1,6 @@
 <?php
 
-use App\Http\Controllers\MainController;
-use App\Http\Controllers\OrderController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -48,6 +47,7 @@ Route::get('/personal_area', function () {
 Route::get('/playlist', function () {
     return view('playlist');
 });
+Route::post('/registration', [UserController::class, "registration"]);
 
 Route::get('/album_create', function () {
     return view('album_create');
