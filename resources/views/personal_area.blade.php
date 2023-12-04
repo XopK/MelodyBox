@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Личный кабинет</title>
     <x-links></x-links>
+    <script src="/script/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
@@ -16,8 +17,8 @@
         <div class="persoanl-area-container">
             <div class="persoanl-area-container-navigation">
                 <ul class="personal-nav-ul">
-                    <p class="personal-nav p-n-first"><a href="/personal_area"><img src="/img/personal.svg"
-                                alt="personal.svg"> Персональные данные</a></p>
+                    <div class="personal-nav p-n-first"><a href="/personal_area"><img src="/img/personal.svg"
+                                alt="personal.svg"> Персональные данные</a></div>
                     <p class="personal-nav"><a href="/album_create"><img src="/img/personal-plus.svg"
                                 alt="personal-plus.svg"> Добавить альбом</a></p>
                     <p class="personal-nav p-n-last"><img src="/img/personal-exit.svg" alt="personal-exit.svg"> Выход
@@ -34,7 +35,7 @@
                         <p>Егор Летов</p>
                     </div>
                 </div>
-                <form action="">
+                <form action="" method="POST" enctype="multipart/form-data">
                     <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3 personal-bottom-area">
                         <div class="col">
                             <label class="personal_form_label" for="firstname">Имя</label>
@@ -56,10 +57,19 @@
                             <label class="personal_form_label" for="password">Пароль</label>
                             <input class="personal_form_input" id="password" type="password">
                         </div>
+                        <div class="col">
+                            <label class="personal_form_label" for="input_file">Фото</label>
+                            <label id="label-profile-photo" for="input_file" class="input_file-button">
+                                <input class="input_file" id="input_file" name="file" type="file">
+                                <span>Выберите файл</span>
+                            </label>
+                        </div>
                     </div>
                     <div class="d-flex justify-content-center mt-4">
                         <button class="button-form">Изменить</button>
                     </div>
+                    <input type="file" id="imageInput" accept="image/*">
+  <img src="" alt="Preview" id="imagePreview" style="max-width: 300px; max-height: 300px;">
                 </form>
             </div>
         </div>
@@ -82,6 +92,35 @@
         links.forEach((el) => {
             el.addEventListener('click', loadHTML);
         });
+
+        $('#label-profile-photo input[type=file]').on('change', function(){
+            let file = this.files[0];
+            $(this).next().html(file.name);
+        });
+
+
+    $(document).ready(function () {
+  // Обработчик изменения значения input с типом file
+  $("#imageInput").change(function () {
+    // Получаем выбранный файл
+    var file = this.files[0];
+
+    // Проверяем, что файл выбран и он изображение
+    if (file && file.type.startsWith("image/")) {
+      // Создаем объект FileReader
+      var reader = new FileReader();
+
+      // Обработчик события загрузки файла
+      reader.onload = function (e) {
+        // Устанавливаем src изображения в атрибуте src тега img
+        $("#imagePreview").attr("src", e.target.result);
+      };
+
+      // Читаем содержимое файла как URL-адрес данных
+      reader.readAsDataURL(file);
+    }
+  });
+});
     </script>
 </body>
 

@@ -57,7 +57,7 @@
         <li><button class="btn-modal py-2" data-bs-toggle="modal" data-bs-target="#Registration">Регистрация</button>
         </li>
         <div class="hr1"></div>
-        <li><button class="btn-modal py-2">Настройка</button></li>
+        <li><a class="btn-modal py-2 d-block text-center" href="/personal_area">Настройка</a></li>
         <div class="hr1"></div>
         <li><button class="btn-modal py-2">Выход</button></li>
         <div class="hr1"></div>
