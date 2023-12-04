@@ -150,6 +150,76 @@ footer {
 .nav-fix {
     cursor: pointer;
 }
+/* Это отвечает за поисковую строку!!! */
+
+.search_form{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 0.9s;
+    width: 40px;
+    height: 40px;
+    background: rgb(255, 255, 255);
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 4px solid #F48A6C;
+    padding: 5px;
+}
+
+.search_input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;;
+    height: 30px;
+    line-height: 30px;
+    outline: 0;
+    border: 0;
+   background: none;
+    display: none;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 20px;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration { display: none; }
+/* .search_content::-webkit-search-results-decoration {
+     display: none; 
+   
+} */
+
+.fa{
+    box-sizing: border-box;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    border-radius: 50%;
+    color: #F48A6C;
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 1s;
+}
+
+form:hover{
+    width: 200px;
+    cursor: pointer;
+}
+
+form:hover input{
+    display: block;
+}
+
+form:hover .fa{
+ 
+    color: #F48A6C;
+}
 
 /* Стили страницы автора */
 .section_author {
