@@ -27,7 +27,7 @@
                 <div class="bg-personal-area">
                     <div class="bg-personal-area-center">
                         <div class="bg-personal-area-left-img">
-                            <img src="/img/egorletov.jpg" alt="">
+                            <img src="/img/egorletov.jpg" alt="preview" id="imagePreview">
                         </div>
                         <p>Егор Летов</p>
                     </div>
@@ -55,9 +55,9 @@
                             <input class="personal_form_input" id="password" type="password">
                         </div>
                         <div class="col">
-                            <label class="personal_form_label" for="input_file">Фото</label>
-                            <label for="input_file" class="input_file-button">
-                                <input class="input_file" id="input_file" name="file" type="file">
+                            <label class="personal_form_label" for="imageInput">Фото</label>
+                            <label for="imageInput" class="input_file-button">
+                                <input class="input_file" id="imageInput" name="file" type="file">
                                 <span>Выберите файл</span>
                             </label>
                         </div>
@@ -69,6 +69,30 @@
             </div>
         </div>
     </div>
+    <script>
+        $(document).ready(function () {
+        // Обработчик изменения значения input с типом file
+            $("#imageInput").change(function () {
+                // Получаем выбранный файл
+                var file = this.files[0];
+            
+                // Проверяем, что файл выбран и он изображение
+                if (file && file.type.startsWith("image/")) {
+                // Создаем объект FileReader
+                var reader = new FileReader();
+            
+                // Обработчик события загрузки файла
+                reader.onload = function (e) {
+                    // Устанавливаем src изображения в атрибуте src тега img
+                    $("#imagePreview").attr("src", e.target.result);
+                };
+            
+                // Читаем содержимое файла как URL-адрес данных
+                reader.readAsDataURL(file);
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

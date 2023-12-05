@@ -51,6 +51,10 @@
                         <span id="field__file-fake">Выберите файлы</span>
                     </label>
                 </div>
+                <div class="col">
+                    <label class="personal_form_label" for="genre">Жанр</label>
+                    <input class="personal_form_input" id="genre" type="text">
+                </div>
                 </div>
                 <div class="d-flex justify-content-center mt-4">
                     <button class="button-form">Добавить</button>
