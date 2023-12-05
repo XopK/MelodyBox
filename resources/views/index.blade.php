@@ -34,15 +34,23 @@
         <h1 id="newRealse" class="new-index-title">НОВЫЕ РЕЛИЗЫ</h1>
         <h1 id="Genres" class="new-index-title">ВЫБЕРИ СВОЙ <span>ЖАНР</span></h1>
         <div class="genres-block">
-            <div class="col d-flex gap-4 flex-wrap ">
+            <div class="row row-cols-6 g-3">
                 @forelse ($genre as $genres)
-                    <a href="/genres">
-                        <div class="genres-card-index">
-                            <span>{{$genres->title_genre}}</span>
-                        </div>
-                    </a>
+                    <div class="col">
+                        <a href="/genres">
+                            <div class="genres-card-index">
+                                <span>{{$genres->title_genre}}</span>
+                            </div>
+                        </a>
+                    </div>
                 @empty
-                    
+                    <div class="col">
+                        <a href="/genres">
+                            <div class="genres-card-index">
+                                <span>Пусто</span>
+                            </div>
+                        </a>
+                    </div>
                 @endforelse
 
             </div>
