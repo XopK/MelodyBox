@@ -19,17 +19,25 @@
                 </p>
                 <div class="umenu d-flex flex-column ">
                     <div class="hr1"></div>
-                    <p class="ordersNew d-flex align-items-center p-2"><img src="/img/new.svg" alt="new"><a
-                            href="/admin/OrdersNew">Новые заявки</a></p>
-                    <p class="ordersDeny d-flex align-items-center p-2"><img src="/img/deny.svg" alt="deny"><a
-                            href="/admin/OrdersDeny">Отклонённые заявки</a></p>
-                    <p class="ordersAccept d-flex align-items-center p-2"><img src="/img/accept.svg" alt="accept"><a
-                            href="/admin/OrdersAccept">Одобренные заявки</a></p>
+                    <a href="/admin/OrdersNew">
+                        <p class="ordersNew d-flex align-items-center p-2"><img src="/img/new.svg" alt="new">Новые
+                            заявки</p>
+                    </a>
+                    <a href="/admin/OrdersDeny">
+                        <p class="ordersDeny d-flex align-items-center p-2"><img src="/img/deny.svg"
+                                alt="deny">Отклонённые заявки</p>
+                    </a>
+                    <a href="/admin/OrdersAccept">
+                        <p class="ordersAccept d-flex align-items-center p-2"><img src="/img/accept.svg"
+                                alt="accept">Одобренные заявки</p>
+                    </a>
                 </div>
                 <div class="d-flex flex-column">
-                    <div class="authors d-flex align-items-center">
-                        <img src="/img/men.svg" alt="authors" class="mx-2 py-3"> <a href="/admin">Авторы</a>
-                    </div>
+                    <a href="/admin">
+                        <div class="authors d-flex align-items-center">
+                            <img src="/img/men.svg" alt="authors" class="mx-2 py-3"> Авторы
+                        </div>
+                    </a>
                     <p class="d-flex align-items-center p-2"><img src="/img/sign_out.svg" alt="sign-out"><a
                             href="/">Выйти из аккаунта</a>
                     </p>
@@ -52,16 +60,18 @@
                     </thead>
                     <tbody>
                         @forelse ($artist as $artists)
-                        <tr>
-                            <th>{{$artists->id}}</th>
-                            <td>{{$artists->user->name}} {{$artists->user->surname}}</td>
-                            <td>{{$artists->artist_name}}</td>
-                            <td>{{$artists->label_email}}</td>
-                            <td><a href="/playlist">Ссылка</a></td>
-                            <td class="text-success">Принято</td>
-                        </tr>
+                            <tr>
+                                <th>{{ $artists->id }}</th>
+                                <td>{{ $artists->user->name }} {{ $artists->user->surname }}</td>
+                                <td>{{ $artists->artist_name }}</td>
+                                <td>{{ $artists->label_email }}</td>
+                                <td><a href="/playlist">Ссылка</a></td>
+                                <td class="text-success">Принято</td>
+                            </tr>
                         @empty
-                        <td><h1>Пусто</h1></td>
+                            <td>
+                                <h1>Пусто</h1>
+                            </td>
                         @endforelse
                     </tbody>
                 </table>

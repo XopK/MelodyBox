@@ -16,22 +16,32 @@
         <h1 class="text-center text-white">Добро пожаловать в админ панель NAME</h1>
         <div class="d-flex mt-5">
             <div class="menu text-white d-flex flex-column ">
-                <p class="d-flex align-items-center m-2"><img src="/img/Chat_plus_fill.svg" alt="chat">Заявки
+                <p class=" d-flex align-items-center m-2"><img src="/img/Chat_plus_fill.svg" alt="chat">Заявки
                     "Стать автором"
                 </p>
                 <div class="umenu d-flex flex-column ">
                     <div class="hr1"></div>
-                    <p class="ordersNew d-flex align-items-center p-2"><img src="/img/new.svg" alt="new"><a
-                            href="/admin/OrdersNew">Новые заявки</a></p>
-                    <p class="ordersDeny d-flex align-items-center p-2"><img src="/img/deny.svg" alt="deny"><a
-                            href="/admin/OrdersDeny">Отклонённые заявки</a></p>
-                    <p class="ordersAccept d-flex align-items-center p-2"><img src="/img/accept.svg" alt="accept"><a
-                            href="/admin/OrdersAccept">Одобренные заявки</a></p>
+                    <a href="/admin/OrdersNew">
+                        <p class="authors ordersNew d-flex align-items-center p-2"><img src="/img/new.svg"
+                                alt="new">Новые
+                            заявки</p>
+                    </a>
+                    <a href="/admin/OrdersDeny">
+                        <p class="ordersDeny d-flex align-items-center p-2"><img src="/img/deny.svg"
+                                alt="deny">Отклонённые заявки</p>
+                    </a>
+                    <a href="/admin/OrdersAccept">
+                        <p class="ordersAccept d-flex align-items-center p-2"><img src="/img/accept.svg"
+                                alt="accept">Одобренные заявки</p>
+                    </a>
                 </div>
                 <div class="d-flex flex-column">
-                    <div class="authors d-flex align-items-center">
-                        <img src="/img/men.svg" alt="authors" class="mx-2 py-3"> <a href="/admin">Авторы</a>
-                    </div>
+                    <a href="/admin">
+                        <div class=" d-flex align-items-center">
+                            <img src="/img/men.svg" alt="authors" class="mx-2 px-1">
+                            Авторы
+                        </div>
+                    </a>
                     <p class="d-flex align-items-center p-2"><img src="/img/sign_out.svg" alt="sign-out"><a
                             href="/">Выйти из аккаунта</a>
                     </p>
@@ -60,7 +70,8 @@
                                 <td>{{ $artists->label_email }}</td>
                                 <td><a href="/playlist">Ссылка</a></td>
                                 <td>
-                                    <a href="/admin/OrdersNew/{{ $artists->id }}/accept" class="accept mx-1">Принять</a>
+                                    <a href="/admin/OrdersNew/{{ $artists->id }}/accept"
+                                        class="accept mx-1">Принять</a>
                                     <a href="/admin/OrdersNew/{{ $artists->id }}/denay" class="deny mx-1">Отклонить</a>
                                 </td>
                             </tr>
