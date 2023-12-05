@@ -43,6 +43,7 @@ class UserController extends Controller
         User::create([
             'name' => $reg_info['reg_name'],
             'surname' => $reg_info['reg_surname'],
+            'profile_photo' => 'default_photo.png',
             'phone_number' => $reg_info['phone_number'],
             'email' => $reg_info['email'],
             'password' => $reg_info['reg_password'],

@@ -27,7 +27,7 @@
                 <div class="bg-personal-area">
                     <div class="bg-personal-area-center">
                         <div class="bg-personal-area-left-img">
-                            <img src="/img/egorletov.jpg" alt="preview" id="imagePreview">
+                            <img src="/img/{{ Auth::user()->profile_photo }}" alt="preview" id="imagePreview">
                         </div>
                         <p>Егор Летов</p>
                     </div>
