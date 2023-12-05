@@ -41,7 +41,7 @@
                     <label class="personal_form_label" for="imageInput">Обложка</label>
                     <label for="imageInput" class="input_file-button">
                         <input class="input_file" id="imageInput" name="cover" type="file" accept="image/*">
-                        <span>Выберите файл</span>
+                        <span id="fileInfo">Выберите файл</span>
                     </label>
                 </div>
                 <div class="col">
@@ -79,6 +79,7 @@
                 reader.onload = function (e) {
                     // Устанавливаем src изображения в атрибуте src тега img
                     $("#imagePreview").attr("src", e.target.result);
+                    $("#fileInfo").text(file.name);
                 };
             
                 // Читаем содержимое файла как URL-адрес данных
