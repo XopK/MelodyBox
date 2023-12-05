@@ -31,20 +31,14 @@
         <div class="dropdownn d-flex">
             <div class="btn-group">
                 <div class="btn-group dropstart" role="group">
-                    <!-- <button type="button" class="btn btn-medium" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="icon-excel"></i>
-                    </button> -->
-                    <form action=""  class="search_form">
-  <input type="search" class="search_input">
-  <i class="fa fa-search"></i>
-</form>
-                    <ul class="dropdown-menu">
-                    </ul>
+                    <form action="" class="search_form">
+                        <input type="search" class="search_input">
+                        <i class="fa fa-search"></i>
+                    </form>
                 </div>
             </div>
             <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
                 aria-controls="offcanvasRight"><i class="icon-excel1"></i></button>
-                
         </div>
     </div>
 </nav>
