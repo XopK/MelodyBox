@@ -15,16 +15,16 @@
         <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
             <ul class="navbar-nav d-flex justify-content-center">
                 <li class="nav-item">
+                    <a class="nav-link text-white" href="/#newAlbum">Новые альбомы</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/#newRealse">Новые релизы</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/#Genres">Жанры</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link text-white" aria-current="page" href="/like">Мой плейлист</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="/genres">Жанры</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="{{ route('author') }}">Авторы</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Новые альбомы</a>
                 </li>
             </ul>
         </div>

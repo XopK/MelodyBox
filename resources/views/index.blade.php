@@ -19,7 +19,7 @@
         </div>
     </div>
     <div class="container">
-        <h1 class="new-index-title">НОВЫЕ АЛЬБОМЫ</h1>
+        <h1 id="newAlbum" class="new-index-title">НОВЫЕ АЛЬБОМЫ</h1>
         <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
             <div class="gallery-cell">
                 <a href="/playlist">
@@ -31,8 +31,8 @@
                 </a>
             </div>
         </div>
-        <h1 class="new-index-title">НОВЫЕ РЕЛИЗЫ</h1>
-        <h1 class="new-index-title">ВЫБЕРИ СВОЙ <span>ЖАНР</span></h1>
+        <h1 id="newRealse" class="new-index-title">НОВЫЕ РЕЛИЗЫ</h1>
+        <h1 id="Genres" class="new-index-title">ВЫБЕРИ СВОЙ <span>ЖАНР</span></h1>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-3">
             <div class="col">
                 <a href="">

@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 Route::get('/author', function () {
     return view('author');
-})->name('author');
+});
 
 Route::get('admin', [AdminController::class, "index"]);
 
