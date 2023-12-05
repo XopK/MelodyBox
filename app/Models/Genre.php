@@ -10,4 +10,11 @@ class Genre extends Model
     use HasFactory;
 
     protected $fillable = ['title_genre'];
+
+    protected $table = 'genres';
+
+    public function albums()
+    {
+        return $this->hasMany(Album::class, 'id_genre');
+    }
 }

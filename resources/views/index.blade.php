@@ -21,15 +21,17 @@
     <div class="container">
         <h1 id="newAlbum" class="new-index-title">НОВЫЕ АЛЬБОМЫ</h1>
         <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
-            <div class="gallery-cell">
-                <a href="/playlist">
-                    <img src="/img/habib.png" alt="">
-                    <div class="gallery-cell-text-block">
-                        <p>Егор Летов</p>
-                        <span>Вершки и корешки</span>
-                    </div>
-                </a>
-            </div>
+            @foreach ($album as $albums)
+                <div class="gallery-cell">
+                    <a href="/playlist/{{$albums->id}}">
+                        <img src="/img/habib.png" alt="">
+                        <div class="gallery-cell-text-block">
+                            <p>{{$albums->artist->artist_name}}</p>
+                            <span>{{$albums->title_album}}</span>
+                        </div>
+                    </a>
+                </div>
+            @endforeach
         </div>
         <h1 id="newRealse" class="new-index-title">НОВЫЕ РЕЛИЗЫ</h1>
         <h1 id="Genres" class="new-index-title">ВЫБЕРИ СВОЙ <span>ЖАНР</span></h1>
@@ -43,16 +45,7 @@
                             </div>
                         </a>
                     </div>
-                @empty
-                    <div class="col">
-                        <a href="/genres">
-                            <div class="genres-card-index">
-                                <span>Пусто</span>
-                            </div>
-                        </a>
-                    </div>
                 @endforelse
-
             </div>
         </div>
     </div>

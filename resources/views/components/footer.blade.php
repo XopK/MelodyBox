@@ -2,7 +2,7 @@
     <div class="footer d-flex justify-content-between align-items-center">
         <div class="logo">
             <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="img/logo.svg" alt="Logo" width="60" height="60"
+                <img src="/img/logo.svg" alt="Logo" width="60" height="60"
                     class="d-inline-block align-text-top me-2">
                 <div class="text-white fs-5">MelodyBox</div>
             </a>
@@ -28,13 +28,13 @@
                     <a href="" class="nav-link text-white">Следите за нами в:</a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link text-white"><img src="img/Telegram.svg" alt="telegram"></a>
+                    <a href="" class="nav-link text-white"><img src="/img/Telegram.svg" alt="telegram"></a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link text-white"><img src="img/OK.svg" alt="ok"></a>
+                    <a href="" class="nav-link text-white"><img src="/img/OK.svg" alt="ok"></a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link text-white"><img src="img/VK.svg" alt="vk"></a>
+                    <a href="" class="nav-link text-white"><img src="/img/VK.svg" alt="vk"></a>
                 </li>
                 <li class="nav-item">
                     <p class="nav-link text-white mt-3">Электронная почта: melodybox1@gmail.com</p>

@@ -3,6 +3,7 @@
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\TrackController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,6 +37,8 @@ Route::get('/admin/OrdersNew/{id}/denay', [AdminController::class, 'DenayApp']);
 
 Route::get('/admin/{id}/delete', [AdminController::class, 'Delete']);
 
+Route::get('/playlist/{id_album}', [TrackController::class, 'showTrack']);
+
 Route::get('/genres', function () {
     return view('genres');
 });
@@ -46,10 +49,6 @@ Route::get('/like', function () {
 Route::get('/personal_area', function () {
     return view('personal_area');
 });
-Route::get('/playlist', function () {
-    return view('playlist');
-});
-
 Route::post('/registration', [UserController::class, "registration"]);
 
 Route::post('/login', [UserController::class, "login"]);
