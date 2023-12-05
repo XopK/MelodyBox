@@ -596,13 +596,17 @@ section {
 }
 
 .genres-card-index {
-    width: 100%;
+    width: 200px;
     height: 130px;
     background-color: #ff0048;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
+}
+
+.genres-block{
+    margin: 0 auto;
 }
 
 .genres-card-index span {
