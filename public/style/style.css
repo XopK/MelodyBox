@@ -1028,6 +1028,10 @@ td {
     margin-top: 20px;
 }
 
+.playlist-sec{
+    padding: 30px 0;
+}
+
 .playlistText p {
     color: white;
 }

@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use App\Models\Artist;
+use Illuminate\Support\Facades\Session;
 
 class UserController extends Controller
 {
@@ -45,6 +48,69 @@ class UserController extends Controller
             'password' => $reg_info['reg_password'],
         ]);
 
-        return redirect('/playlist')->with("succes", "Успешная регистрация");
+        return redirect('/playlist')->with('succes', 'Успешная регистрация');
+    }
+
+    public function login(Request $request)
+    {
+        $request->validate(
+            [
+                'log_email' => 'required|email',
+                'log_password' => 'required',
+            ],
+            [
+                'log_email.required' => 'Заполните поле!',
+                'log_email.email' => 'Введите правильный адрес!',
+                'log_password.required' => 'Заполните поле!',
+            ],
+        );
+
+        $user = $request->only('log_email', 'log_password');
+
+        if (
+            Auth::attempt([
+                'email' => $user['log_email'],
+                'password' => $user['log_password'],
+            ])
+        ) {
+            return redirect('/')->with('succes', '');
+        } else {
+            return redirect('/')->with('error', 'Проверьте введеные данные!');
+        }
+    }
+
+    public function logout()
+    {
+        Session::flush();
+        Auth::logout();
+        return redirect('/');
+    }
+
+    public function application_artist(Request $request)
+    {
+        $request->validate(
+            [
+                'artist_name' => 'required',
+                'label_email' => 'required|email',
+            ],
+            [
+                'artist_name.required' => 'Заполните поле!',
+                'label_email.email' => 'Введите правильный адрес!',
+                'label_email.required' => 'Заполните поле!',
+            ],
+        );
+
+        $id_user = Auth::user()->id;
+
+        $application = $request->all();
+
+        Artist::create([
+            'id_user' => $id_user,
+            'artist_name' => $application['artist_name'],
+            'profile_img' => 'default_profile.png',
+            'banner_profile' => 'default_banner.png',
+            'label_email' => $application['label_email'],
+        ]);
+        return redirect('/')->with('succes', 'Заявка подана');
     }
 }

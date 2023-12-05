@@ -15,10 +15,10 @@
         <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
             <ul class="navbar-nav d-flex justify-content-center">
                 <li class="nav-item">
-                    <a class="nav-link text-white" aria-current="page" href="#">Новые релизы</a>
+                    <a class="nav-link text-white" aria-current="page" href="/like">Мой плейлист</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="">Жанры</a>
+                    <a class="nav-link text-white" href="/genres">Жанры</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{ route('author') }}">Авторы</a>
@@ -46,21 +46,29 @@
 <div class="offcanvas offcanvas-end text-white" style="background-color: #0C051E" tabindex="-1" id="offcanvasRight"
     aria-labelledby="offcanvasRightLabel">
     <div class="offcanvas-header">
-        <h5 class="offcanvas-title d-flex" id="offcanvasRightLabel">Здравствуй, <p>NAME</p>
-        </h5>
+        @auth
+            <h5 class="offcanvas-title d-flex" id="offcanvasRightLabel">Здравствуй, <p>{{ Auth::user()->name }}</p>
+            </h5>
+        @endauth
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-        <div class="hr1"></div>
-        <li><button class="btn-modal py-2" data-bs-toggle="modal" data-bs-target="#Authorization">Вход</button></li>
-        <div class="hr1"></div>
-        <li><button class="btn-modal py-2" data-bs-toggle="modal" data-bs-target="#Registration">Регистрация</button>
-        </li>
+        @guest
+            <div class="hr1"></div>
+            <li><button class="btn-modal py-2" data-bs-toggle="modal" data-bs-target="#Authorization">Вход</button></li>
+            <div class="hr1"></div>
+            <li><button class="btn-modal py-2" data-bs-toggle="modal" data-bs-target="#Registration">Регистрация</button>
+            </li>
+            <div class="hr1"></div>
+        @endguest
+        @auth
         <div class="hr1"></div>
         <li><a class="btn-modal py-2 d-block text-center" href="/personal_area">Настройка</a></li>
         <div class="hr1"></div>
-        <li><button class="btn-modal py-2">Выход</button></li>
+        <li><a href="/logout" class="btn-modal py-2 d-block text-center">Выход</a></li>
         <div class="hr1"></div>
+        @endauth
+        
     </div>
 </div>
 <x-registration></x-registration>

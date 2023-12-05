@@ -22,7 +22,7 @@ crossorigin="anonymous"></script>
 </head>
 <body>
     <x-header></x-header>
-    <section class="section_like">
+    <section class="section_like playlist-sec">
     <div class="container">
         <div class="playlistGeneral">
             <div class="playlistHead">

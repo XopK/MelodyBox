@@ -55,9 +55,12 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach ($artists as $artist)
+                            
+                        @endforeach
                         <tr>
                             <th>1</th>
-                            <td>Смирнов А.А.</td>
+                            <td>{{}}</td>
                             <td>Водказавр</td>
                             <td>@LexaKypu2@gmail.com</td>
                             <td>Рок</td>

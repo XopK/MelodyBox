@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,9 +22,8 @@ Route::get('/author', function () {
     return view('author');
 })->name('author');
 
-Route::get('admin', function () {
-    return view('admin.index');
-});
+Route::get('admin', [AdminController::class, "index"]);
+
 Route::get('admin/OrdersNew', function () {
     return view('admin.ordersNew');
 });
@@ -47,7 +47,14 @@ Route::get('/personal_area', function () {
 Route::get('/playlist', function () {
     return view('playlist');
 });
+
 Route::post('/registration', [UserController::class, "registration"]);
+
+Route::post('/login', [UserController::class, "login"]);
+
+Route::get('/logout', [UserController::class, 'logout']);
+
+Route::post('/application', [UserController::class, "application_artist"]);
 
 Route::get('/album_create', function () {
     return view('album_create');
