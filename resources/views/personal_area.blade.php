@@ -17,12 +17,9 @@
         <div class="persoanl-area-container">
             <div class="persoanl-area-container-navigation">
                 <ul class="personal-nav-ul">
-                    <div class="personal-nav p-n-first"><a href="/personal_area"><img src="/img/personal.svg"
-                                alt="personal.svg"> Персональные данные</a></div>
-                    <p class="personal-nav"><a href="/album_create"><img src="/img/personal-plus.svg"
-                                alt="personal-plus.svg"> Добавить альбом</a></p>
-                    <p class="personal-nav p-n-last"><img src="/img/personal-exit.svg" alt="personal-exit.svg"> Выход
-                        из аккаунта</p>
+                    <a href="/personal_area"><li class="personal-nav p-n-first"><img src="/img/personal.svg" alt="personal.svg"> Персональные данные</li></a>
+                    <a href="/album_create"><li class="personal-nav"><img src="/img/personal-plus.svg" alt="personal-plus.svg"> Добавить альбом</li></a>
+                    <li class="personal-nav p-n-last"><img src="/img/personal-exit.svg" alt="personal-exit.svg"> Выход из аккаунта</li>
                 </ul>
             </div>
             <div id="change" class="personal-profile">
@@ -59,7 +56,7 @@
                         </div>
                         <div class="col">
                             <label class="personal_form_label" for="input_file">Фото</label>
-                            <label id="label-profile-photo" for="input_file" class="input_file-button">
+                            <label for="input_file" class="input_file-button">
                                 <input class="input_file" id="input_file" name="file" type="file">
                                 <span>Выберите файл</span>
                             </label>
@@ -68,60 +65,10 @@
                     <div class="d-flex justify-content-center mt-4">
                         <button class="button-form">Изменить</button>
                     </div>
-                    <input type="file" id="imageInput" accept="image/*">
-  <img src="" alt="Preview" id="imagePreview" style="max-width: 300px; max-height: 300px;">
                 </form>
             </div>
         </div>
     </div>
-    <script type="text/javascript">
-        let links = document.querySelectorAll('p>a');
-        let output = document.getElementById('change');
-
-        let ajax = new XMLHttpRequest();
-        ajax.addEventListener('readystatechange', function() {
-            if (this.readyState == 4 && this.status == 200)
-                output.innerHTML = this.responseText;
-        });
-
-        function loadHTML(evt) {
-            ajax.open('GET', this.href, true);
-            ajax.send();
-            evt.preventDefault();
-        }
-        links.forEach((el) => {
-            el.addEventListener('click', loadHTML);
-        });
-
-        $('#label-profile-photo input[type=file]').on('change', function(){
-            let file = this.files[0];
-            $(this).next().html(file.name);
-        });
-
-
-    $(document).ready(function () {
-  // Обработчик изменения значения input с типом file
-  $("#imageInput").change(function () {
-    // Получаем выбранный файл
-    var file = this.files[0];
-
-    // Проверяем, что файл выбран и он изображение
-    if (file && file.type.startsWith("image/")) {
-      // Создаем объект FileReader
-      var reader = new FileReader();
-
-      // Обработчик события загрузки файла
-      reader.onload = function (e) {
-        // Устанавливаем src изображения в атрибуте src тега img
-        $("#imagePreview").attr("src", e.target.result);
-      };
-
-      // Читаем содержимое файла как URL-адрес данных
-      reader.readAsDataURL(file);
-    }
-  });
-});
-    </script>
 </body>
 
 </html>
