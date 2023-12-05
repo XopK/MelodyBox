@@ -10,7 +10,7 @@ class AdminController extends Controller
 {
     public function index()
     {
-        $artist = Artist::all();
-        dd($artist);
+        $artists = Artist::with('user')->get();
+        return view('admin.index', ['artist' => $artists]);
     }
 }

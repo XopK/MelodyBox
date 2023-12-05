@@ -10,5 +10,10 @@ class Artist extends Model
 {
     protected $fillable = ['id_user', 'artist_name', 'profile_img', 'banner_profile', 'label_email'];
 
-   
+    protected $table = 'artists';
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'id_user', 'id');
+    }
 }

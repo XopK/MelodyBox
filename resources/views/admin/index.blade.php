@@ -46,7 +46,7 @@
                         </tr>
                         <tr>
                             <th>№</th>
-                            <th>ФИО</th>
+                            <th>Фамилия и имя</th>
                             <th>Псевдоним</th>
                             <th>Электронная почта</th>
                             <th>Жанр</th>
@@ -55,18 +55,18 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($artists as $artist)
-                            
-                        @endforeach
+                        @foreach ($artist as $artists)
                         <tr>
-                            <th>1</th>
-                            <td>{{}}</td>
-                            <td>Водказавр</td>
-                            <td>@LexaKypu2@gmail.com</td>
+                            <th>{{$artists->id}}</th>
+                            <td>{{$artists->user->name}} {{$artists->user->surname}}</td>
+                            <td>{{$artists->artist_name}}</td>
+                            <td>{{$artists->label_email}}</td>
                             <td>Рок</td>
                             <td>Ссылка</td>
                             <td><a href="" class="text-danger">Удалить автора</a></td>
                         </tr>
+                        @endforeach
+                        
                     </tbody>
                 </table>
 

@@ -19,23 +19,14 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $fillable = [
-        'name',
-        'surname',
-        'phone_number',
-        'email',
-        'password',
-    ];
+    protected $fillable = ['name', 'surname', 'phone_number', 'email', 'password'];
 
     /**
      * The attributes that should be hidden for serialization.
      *
      * @var array<int, string>
      */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
+    protected $hidden = ['password', 'remember_token'];
 
     /**
      * The attributes that should be cast.
@@ -46,5 +37,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
-    
+
+    protected $table = 'users';
+
+    public function artists()
+    {
+        return $this->hasMany(Artist::class, 'id_user', 'id');
+    }
 }
