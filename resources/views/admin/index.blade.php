@@ -10,9 +10,6 @@
 </head>
 
 <body>
-
-    <x-header></x-header>
-
     <div class="container mt-5">
         <h1 class="text-center text-white">Добро пожаловать в админ панель NAME</h1>
         <div class="d-flex mt-5">
@@ -34,7 +31,7 @@
                         <img src="/img/men.svg" alt="authors" class="mx-2 py-3"> <a href="/admin">Авторы</a>
                     </div>
                     <p class="d-flex align-items-center p-2"><img src="/img/sign_out.svg" alt="sign-out"
-                            class=""><a href="">Выйти из аккаунта</a>
+                            class="/"><a href="">Выйти из аккаунта</a>
                     </p>
                 </div>
             </div>
@@ -54,16 +51,18 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($artist as $artists)
+                        @forelse ($artist as $artists)
                         <tr>
                             <th>{{$artists->id}}</th>
                             <td>{{$artists->user->name}} {{$artists->user->surname}}</td>
                             <td>{{$artists->artist_name}}</td>
                             <td>{{$artists->label_email}}</td>
                             <td><a href="/playlist">Ссылка</a></td>
-                            <td><a href="" class="text-danger">Удалить автора</a></td>
+                            <td><a href="/admin/{{$artists->id}}/delete" class="text-danger">Удалить автора</a></td>
                         </tr>
-                        @endforeach
+                        @empty
+                        <td><h1>Пусто</h1></td>
+                        @endforelse
                         
                     </tbody>
                 </table>

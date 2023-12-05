@@ -18,7 +18,7 @@
                 <li class="nav-item">
                     <a href="" class="nav-link text-white">Поддержка </a>
                 </li>
-                @auth
+                @auth 
                 <li class="nav-item">
                     <a class="nav-fix nav-link text-white" data-bs-toggle="modal" data-bs-target="#Artist">Стать
                         автором</a>

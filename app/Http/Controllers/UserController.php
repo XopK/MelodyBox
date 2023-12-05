@@ -110,6 +110,7 @@ class UserController extends Controller
             'profile_img' => 'default_profile.png',
             'banner_profile' => 'default_banner.png',
             'label_email' => $application['label_email'],
+            'status_num' => 0
         ]);
         return redirect('/')->with('succes', 'Заявка подана');
     }

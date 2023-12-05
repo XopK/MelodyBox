@@ -24,15 +24,17 @@ Route::get('/author', function () {
 
 Route::get('admin', [AdminController::class, "index"]);
 
-Route::get('admin/OrdersNew', function () {
-    return view('admin.ordersNew');
-});
-Route::get('admin/OrdersAccept', function () {
-    return view('admin.OrdersAccept');
-});
-Route::get('admin/OrdersDeny', function () {
-    return view('admin.ordersDeny');
-});
+Route::get('admin/OrdersNew', [AdminController::class, 'OrderNew']);
+
+Route::get('admin/OrdersAccept', [AdminController::class, 'OrderAccept']);
+
+Route::get('admin/OrdersDeny', [AdminController::class, 'OrderDeny']);
+
+Route::get('/admin/OrdersNew/{id}/accept', [AdminController::class, 'AcceptApp']);
+
+Route::get('/admin/OrdersNew/{id}/denay', [AdminController::class, 'DenayApp']);
+
+Route::get('/admin/{id}/delete', [AdminController::class, 'Delete']);
 
 Route::get('/genres', function () {
     return view('genres');
