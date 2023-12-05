@@ -48,7 +48,7 @@ class UserController extends Controller
             'password' => $reg_info['reg_password'],
         ]);
 
-        return redirect('/playlist')->with('succes', 'Успешная регистрация');
+        return redirect('/')->with('succes', 'Успешная регистрация');
     }
 
     public function login(Request $request)
@@ -73,7 +73,7 @@ class UserController extends Controller
                 'password' => $user['log_password'],
             ])
         ) {
-            return redirect('/')->with('succes', '');
+            return redirect('/playlist')->with('succes', '');
         } else {
             return redirect('/')->with('error', 'Проверьте введеные данные!');
         }
