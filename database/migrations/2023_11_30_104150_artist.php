@@ -20,6 +20,7 @@ return new class extends Migration {
             $table->string('profile_img');
             $table->string('banner_profile');
             $table->string('label_email');
+            $table->integer('status_num');
             $table->timestamps();
         });
     }

@@ -49,7 +49,6 @@
                             <th>Фамилия и имя</th>
                             <th>Псевдоним</th>
                             <th>Электронная почта</th>
-                            <th>Жанр</th>
                             <th>Ссылка на страницу</th>
                             <th></th>
                         </tr>
@@ -61,8 +60,7 @@
                             <td>{{$artists->user->name}} {{$artists->user->surname}}</td>
                             <td>{{$artists->artist_name}}</td>
                             <td>{{$artists->label_email}}</td>
-                            <td>Рок</td>
-                            <td>Ссылка</td>
+                            <td><a href="/playlist">Ссылка</a></td>
                             <td><a href="" class="text-danger">Удалить автора</a></td>
                         </tr>
                         @endforeach

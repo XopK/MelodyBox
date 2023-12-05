@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Artist extends Model
 {
-    protected $fillable = ['id_user', 'artist_name', 'profile_img', 'banner_profile', 'label_email'];
+    protected $fillable = ['id_user', 'artist_name', 'profile_img', 'banner_profile', 'label_email', 'status_num'];
 
     protected $table = 'artists';
 
