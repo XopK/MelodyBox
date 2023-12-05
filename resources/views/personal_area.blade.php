@@ -29,35 +29,39 @@
                         <div class="bg-personal-area-left-img">
                             <img src="/img/egorletov.jpg" alt="preview" id="imagePreview">
                         </div>
-                        <p>Егор Летов</p>
+                        <p>Егор Летов (Серный гриб)</p>
                     </div>
                 </div>
                 <form action="" method="POST" enctype="multipart/form-data">
                     <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3 personal-bottom-area">
                         <div class="col">
                             <label class="personal_form_label" for="firstname">Имя</label>
-                            <input class="personal_form_input" id="firstname" type="text">
+                            <input class="personal_form_input" id="firstname" type="text" name="firstname">
                         </div>
                         <div class="col">
                             <label class="personal_form_label" for="lastname">Фамилия</label>
-                            <input class="personal_form_input" id="lastname" type="text">
+                            <input class="personal_form_input" id="lastname" type="text" name="lastname">
                         </div>
                         <div class="col">
                             <label class="personal_form_label" for="phone">Номер телефона</label>
-                            <input class="personal_form_input" id="phone" type="text">
+                            <input class="personal_form_input" id="phone" type="text" name="phone">
                         </div>
                         <div class="col">
                             <label class="personal_form_label" for="email">Электронная почта</label>
-                            <input class="personal_form_input" id="email" type="email">
+                            <input class="personal_form_input" id="email" type="email" name="email">
                         </div>
                         <div class="col">
                             <label class="personal_form_label" for="password">Пароль</label>
-                            <input class="personal_form_input" id="password" type="password">
+                            <input class="personal_form_input" id="password" type="password" name="password">
+                        </div>
+                        <div class="col">
+                            <label class="personal_form_label" for="artist_name">Псевдоним</label>
+                            <input class="personal_form_input" id="artist_name" type="password" name="artist_name">
                         </div>
                         <div class="col">
                             <label class="personal_form_label" for="imageInput">Фото</label>
                             <label for="imageInput" class="input_file-button">
-                                <input class="input_file" id="imageInput" name="file" type="file">
+                                <input class="input_file" id="imageInput" name="photo" type="file">
                                 <span id="fileInfo">Выберите файл</span>
                             </label>
                         </div>

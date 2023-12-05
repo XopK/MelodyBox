@@ -40,20 +40,20 @@
                 <div class="col">
                     <label class="personal_form_label" for="imageInput">Обложка</label>
                     <label for="imageInput" class="input_file-button">
-                        <input class="input_file" id="imageInput" name="cover" type="file" accept="image/*">
+                        <input class="input_file" id="imageInput" name="cover" type="file" accept="image/*" name="cover">
                         <span id="fileInfo">Выберите файл</span>
                     </label>
                 </div>
                 <div class="col">
                     <label class="personal_form_label" for="input_tracks">Треки</label>
                     <label for="input_tracks" class="input_file-button">
-                        <input class="input_file" id="input_tracks" name="tracks" type="file" multiple>
+                        <input class="input_file" id="input_tracks" name="tracks" type="file" multiple name="traks[]">
                         <span id="field__file-fake">Выберите файлы</span>
                     </label>
                 </div>
                 <div class="col">
                     <label class="personal_form_label" for="genre">Жанр</label>
-                    <input class="personal_form_input" id="genre" type="text">
+                    <input class="personal_form_input" id="genre" type="text" name="genre">
                 </div>
                 </div>
                 <div class="d-flex justify-content-center mt-4">
@@ -65,39 +65,28 @@
     </div>
     <script>
         $(document).ready(function () {
-        // Обработчик изменения значения input с типом file
             $("#imageInput").change(function () {
-                // Получаем выбранный файл
                 var file = this.files[0];
-            
-                // Проверяем, что файл выбран и он изображение
                 if (file && file.type.startsWith("image/")) {
-                // Создаем объект FileReader
                 var reader = new FileReader();
-            
-                // Обработчик события загрузки файла
                 reader.onload = function (e) {
-                    // Устанавливаем src изображения в атрибуте src тега img
                     $("#imagePreview").attr("src", e.target.result);
                     $("#fileInfo").text(file.name);
                 };
-            
-                // Читаем содержимое файла как URL-адрес данных
                 reader.readAsDataURL(file);
                 }
             });
         });
 
         document.getElementById("input_tracks").addEventListener("change", function () {
-        var fileInput = this;
-        var spanElement = document.getElementById("field__file-fake");
-
-        if (fileInput.files && fileInput.files.length > 0) {
-            spanElement.textContent = "Выбрано файлов: " + fileInput.files.length;
-        } else {
-            spanElement.textContent = "Выберите файлы";
-        }
-    });
+            var fileInput = this;
+            var spanElement = document.getElementById("field__file-fake");
+            if (fileInput.files && fileInput.files.length > 0) {
+                spanElement.textContent = "Выбрано файлов: " + fileInput.files.length;
+            } else {
+                spanElement.textContent = "Выберите файлы";
+            }
+        });
     </script>
 </body>
 
