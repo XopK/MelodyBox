@@ -42,11 +42,7 @@
                         </div>
                     </a>
                 @empty
-                    <a href="/genres">
-                        <div class="genres-card-index">
-                            <span>{{$genres->title_genre}}</span>
-                        </div>
-                    </a>
+                    
                 @endforelse
 
             </div>
