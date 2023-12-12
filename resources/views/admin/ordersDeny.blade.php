@@ -16,17 +16,17 @@
         <h1 class="text-center text-white">Добро пожаловать в админ панель NAME</h1>
         <div class="d-flex mt-5">
             <div class="menu text-white d-flex flex-column ">
-                <p class="d-flex align-items-center m-2"><img src="/img/Chat_plus_fill.svg" alt="chat">Заявки
+                <p class=" d-flex align-items-center m-2"><img src="/img/Chat_plus_fill.svg" alt="chat">Заявки
                     "Стать автором"
                 </p>
                 <div class="umenu d-flex flex-column ">
                     <div class="hr1"></div>
                     <a href="/admin/OrdersNew">
-                        <p class="ordersNew d-flex align-items-center p-2"><img src="/img/new.svg" alt="new">Новые
+                        <p class=" ordersNew d-flex align-items-center p-2"><img src="/img/new.svg" alt="new">Новые
                             заявки</p>
                     </a>
                     <a href="/admin/OrdersDeny">
-                        <p class="ordersDeny d-flex align-items-center p-2"><img src="/img/deny.svg"
+                        <p class="authors d-flex align-items-center p-2"><img src="/img/deny.svg"
                                 alt="deny">Отклонённые заявки</p>
                     </a>
                     <a href="/admin/OrdersAccept">
@@ -36,11 +36,12 @@
                 </div>
                 <div class="d-flex flex-column">
                     <a href="/admin">
-                        <div class="authors d-flex align-items-center">
-                            <img src="/img/men.svg" alt="authors" class="mx-2 py-3"> Авторы
+                        <div class="activea d-flex align-items-center p-2">
+                            <img src="/img/men.svg" alt="authors" style="max-width: 24px; max-height:24px;">
+                            Авторы
                         </div>
                     </a>
-                    <p class="d-flex align-items-center p-2"><img src="/img/sign_out.svg" alt="sign-out"><a
+                    <p class="signout d-flex align-items-center p-2"><img src="/img/sign_out.svg" alt="sign-out"><a
                             href="/">Выйти из аккаунта</a>
                     </p>
                 </div>

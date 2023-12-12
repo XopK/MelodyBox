@@ -37,12 +37,12 @@
                 </div>
                 <div class="d-flex flex-column">
                     <a href="/admin">
-                        <div class=" d-flex align-items-center">
-                            <img src="/img/men.svg" alt="authors" class="mx-2 px-1">
+                        <div class="activea d-flex align-items-center p-2">
+                            <img src="/img/men.svg" alt="authors" style="max-width: 24px; max-height:24px;">
                             Авторы
                         </div>
                     </a>
-                    <p class="d-flex align-items-center p-2"><img src="/img/sign_out.svg" alt="sign-out"><a
+                    <p class="signout d-flex align-items-center p-2"><img src="/img/sign_out.svg" alt="sign-out"><a
                             href="/">Выйти из аккаунта</a>
                     </p>
                 </div>
