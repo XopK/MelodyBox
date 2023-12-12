@@ -74,7 +74,7 @@ class UserController extends Controller
                 'password' => $user['log_password'],
             ])
         ) {
-            return redirect('/playlist')->with('succes', '');
+            return redirect('/')->with('succes', '');
         } else {
             return redirect('/')->with('error', 'Проверьте введеные данные!');
         }

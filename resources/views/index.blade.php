@@ -24,7 +24,7 @@
             @foreach ($album as $albums)
                 <div class="gallery-cell">
                     <a href="/playlist/{{ $albums->id }}">
-                        <img src="/img/habib.png" alt="">
+                        <img src="/storage/albums/{{$albums->album_banner}}" alt="{{$albums->banner_album}}">
                         <div class="gallery-cell-text-block">
                             <p>{{ $albums->artist->artist_name }}</p>
                             <span>{{ $albums->title_album }}</span>

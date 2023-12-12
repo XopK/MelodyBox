@@ -13,6 +13,8 @@ class Track extends Model
 
     protected $table = 'tracks';
 
+    public $timestamps = false;
+
     public function album()
     {
         return $this->belongsTo(Album::class, 'id_album');

@@ -35,6 +35,8 @@ Route::get('/admin/OrdersNew/{id}/accept', [AdminController::class, 'AcceptApp']
 
 Route::get('/admin/OrdersNew/{id}/denay', [AdminController::class, 'DenayApp']);
 
+Route::post('/album_create/create', [TrackController::class, 'addTracks']);
+
 Route::get('/admin/{id}/delete', [AdminController::class, 'Delete']);
 
 Route::get('/playlist/{id_album}', [TrackController::class, 'showTrack']);

@@ -13,6 +13,8 @@ class Genre extends Model
 
     protected $table = 'genres';
 
+    public $timestamps = false;
+
     public function albums()
     {
         return $this->hasMany(Album::class, 'id_genre');

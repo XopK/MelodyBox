@@ -28,7 +28,7 @@
             <div class="playlistGeneral">
                 <div class="playlistHead">
                     <div>
-                        <img src="/img/album.png" alt="Ошибочка вышла">
+                        <img src="/storage/albums/{{$album->album_banner}}" alt="{{$album->album_banner}}">
                     </div>
                     <div class="playlistText">
                         <p>Альбом</p>
@@ -40,7 +40,6 @@
                                 <button class='button_like' onclick="showAlert"></button>
                                 <p>Слушать</p>
                             </div>
-                            <button class="button_points_like">• • •</button>
                         </div>
                     </div>
                 </div>
@@ -48,10 +47,18 @@
     </section>
     <hr>
     <div class="playlistGenre container d-flex flex-column gap-4 m-auto">
+        @php
+        $count = 0;
+        @endphp
         @foreach ($track as $tracks )
-        <div class="d-flex track align-items-center">
-            <div class="d-flex gap-5 align-items-center text_track">
-                <span style="font-size: 40px;">1</span>
+        @php
+        $count += 1;    
+        @endphp
+        <audio src=""></audio>
+        {{-- вот это вниз --}}
+        <div class="d-flex track align-items-center justify-content-between px-3">
+            <div class="d-flex gap-5 align-items-center text_track ">
+                <span style="font-size: 40px;">{{$count}}</span>
                 <img src="/img/avaauth.svg">
                 <span style="font-size: 24px;">{{$tracks->title_track}}</span>
                 <span style="font-size: 12px;">{{$tracks->album->artist->artist_name}}</span>
@@ -60,7 +67,6 @@
                 <div class="button_border">
                     <button class='button'></button>
                 </div>
-                <button class="button_points">• • • </button>
             </div>
         </div>
         @endforeach
