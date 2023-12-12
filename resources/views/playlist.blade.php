@@ -67,6 +67,7 @@
                 <div class="button_border">
                     <button class='button'></button>
                 </div>
+                <button class="button_points">Лайк </button>
             </div>
         </div>
         @endforeach

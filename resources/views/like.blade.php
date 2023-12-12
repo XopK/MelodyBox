@@ -44,10 +44,7 @@
     </section>
     <section>
         <div class="container releases">
-            <div class="add_block">
-                <button></button>
-                <p class="fw-bold fs-4 ">Добавить трек</p>
-            </div>
+            
             <div class="releases_track d-flex flex-column gap-4">
                 <div class="d-flex track align-items-center ">
                     <div class="d-flex gap-5 align-items-center text_track">
@@ -60,7 +57,7 @@
                         <div class="button_border">
                             <button class='button' onclick="showAlert"></button>
                         </div>
-                        <button class="button_points">• • • </button>
+                        <button class="button_points">Лайк </button>
                     </div>
                 </div>
 
@@ -75,7 +72,7 @@
                         <div class="button_border d-flex align-items-center">
                             <button class='button' onclick="showAlert"></button>
                         </div>
-                        <button class="button_points">• • • </button>
+                        <button class="button_points">Лайк </button>
                     </div>
                 </div>
 
