@@ -23,11 +23,11 @@
         <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
             @foreach ($album as $albums)
                 <div class="gallery-cell">
-                    <a href="/playlist/{{$albums->id}}">
+                    <a href="/playlist/{{ $albums->id }}">
                         <img src="/img/habib.png" alt="">
                         <div class="gallery-cell-text-block">
-                            <p>{{$albums->artist->artist_name}}</p>
-                            <span>{{$albums->title_album}}</span>
+                            <p>{{ $albums->artist->artist_name }}</p>
+                            <span>{{ $albums->title_album }}</span>
                         </div>
                     </a>
                 </div>
@@ -41,10 +41,11 @@
                     <div class="col">
                         <a href="/genres">
                             <div class="genres-card-index">
-                                <span>{{$genres->title_genre}}</span>
+                                <span>{{ $genres->title_genre }}</span>
                             </div>
                         </a>
                     </div>
+                @empty
                 @endforelse
             </div>
         </div>
