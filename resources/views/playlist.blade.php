@@ -14,8 +14,7 @@
     </script>
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
         crossorigin="anonymous"></script>
-
-
+    <script src="/script/player.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/style/style.css">
@@ -52,28 +51,60 @@
         @endphp
         @foreach ($track as $tracks )
         @php
-        $count += 1;    
+            $count += 1;
         @endphp
-        <audio src=""></audio>
-        {{-- вот это вниз --}}
-        <div class="d-flex track align-items-center justify-content-between px-3">
-            <div class="d-flex gap-5 align-items-center text_track ">
-                <span style="font-size: 40px;">{{$count}}</span>
+        <div id="audioPlayer">
+            <audio controls id="audio{{$count}}">
+                <source src="/music/play.mp3">
+            </audio>
+        </div>
+        <div class="block-track">
+            <div class="block-track-left">
+                <span>{{$count}}</span>
                 <img src="/img/{{$artist->profile_img}}">
-                <span style="font-size: 24px;">{{$tracks->title_track}}</span>
-                <span style="font-size: 12px;">{{$tracks->album->artist->artist_name}}</span>
             </div>
-            <div class="d-flex gap-2 align-items-center">
-                <div class="button_border">
-                    <button class='button'></button>
+            <div class="block-track-c-left">
+                <span>{{$tracks->title_track}}</span>
+                <span>{{$tracks->album->artist->artist_name}}</span>
+            </div>
+            <div class="block-track-c-right">
+                <div class="time" id="time{{$count}}"></div>
+            </div>
+            <div class="block-track-right">
+                <div class="d-flex justify-content-between">
+                    <button class="btn btn-danger button_points" id="playPause{{$count}}">Play😆!</button>
+                    <a href="/like/{{{$tracks->id}}}" class="btn btn-danger button_points">Лайк</a>
                 </div>
-                <a href="/like/{{{$tracks->id}}}" class="btn btn-outline-primary button_points">Лайк</a>
+                <input type="range" id="volume{{$count}}" min="0" max="1" step="0.01" value="1">
             </div>
         </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var audio = document.getElementById('audio{{$count}}');
+                var volumeControl = document.getElementById('volume{{$count}}');
+                var playPauseButton = document.getElementById('playPause{{$count}}');
+                var time = document.getElementById('time{{$count}}');
+                volumeControl.addEventListener('input', function () {
+                audio.volume = volumeControl.value;
+                });
+                playPauseButton.addEventListener('click', function () {
+                if (audio.paused) {
+                    audio.play();
+                    playPauseButton.textContent = 'Pause😥';
+                    audioPlay = setInterval(function() {
+                        let audioTime = Math.round(audio.currentTime);
+                        let audioLength = Math.round(audio.duration)
+                        time.style.width = (audioTime * 100) / audioLength + '%';});
+                } else {
+                    audio.pause();
+                    playPauseButton.textContent = 'Play😆!';
+                }
+                });
+            });
+        </script>
         @endforeach
     </div>
     </div>
-    <script src="script/script.js"></script>
     <x-footer></x-footer>
 </body>
 

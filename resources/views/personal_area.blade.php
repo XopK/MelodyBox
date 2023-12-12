@@ -79,19 +79,19 @@
             $("#imageInput").change(function () {
                 // Получаем выбранный файл
                 var file = this.files[0];
-            
+
                 // Проверяем, что файл выбран и он изображение
                 if (file && file.type.startsWith("image/")) {
                 // Создаем объект FileReader
                 var reader = new FileReader();
-            
+
                 // Обработчик события загрузки файла
                 reader.onload = function (e) {
                     // Устанавливаем src изображения в атрибуте src тега img
                     $("#imagePreview").attr("src", e.target.result);
                     $("#fileInfo").text(file.name);
                 };
-            
+
                 // Читаем содержимое файла как URL-адрес данных
                 reader.readAsDataURL(file);
                 }
