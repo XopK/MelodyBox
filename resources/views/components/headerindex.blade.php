@@ -23,9 +23,11 @@
                 <li class="nav-item">
                     <a class="nav-link text-white" href="#Genres">Жанры</a>
                 </li>
+                @auth
                 <li class="nav-item">
                     <a class="nav-link text-white" aria-current="page" href="/like">Мой плейлист</a>
                 </li>
+                @endauth
             </ul>
         </div>
         <div class="dropdownn d-flex">

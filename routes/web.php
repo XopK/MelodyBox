@@ -41,13 +41,12 @@ Route::get('/admin/{id}/delete', [AdminController::class, 'Delete']);
 
 Route::get('/playlist/{id_album}', [TrackController::class, 'showTrack']);
 
-Route::get('/genres', function () {
-    return view('genres');
-});
+Route::get('/genres/{genre}', [TrackController::class, 'genresShow']);
 
-Route::get('/like', function () {
-    return view('like');
-});
+Route::get('/like',[TrackController::class, 'LikeTrack']);
+
+Route::get('/like/{like}',[TrackController::class, 'addLike']);
+
 Route::get('/personal_area', function () {
     return view('personal_area');
 });

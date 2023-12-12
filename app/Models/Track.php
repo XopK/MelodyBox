@@ -19,4 +19,14 @@ class Track extends Model
     {
         return $this->belongsTo(Album::class, 'id_album');
     }
+
+    public function playlists()
+    {
+        return $this->hasMany(Playlist::class, 'id_track');
+    }
+
+    public function artist()
+    {
+        return $this->belongsTo(Artist::class, 'id_artist');
+    }
 }

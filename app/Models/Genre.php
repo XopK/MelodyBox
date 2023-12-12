@@ -19,4 +19,9 @@ class Genre extends Model
     {
         return $this->hasMany(Album::class, 'id_genre');
     }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'id_user');
+    }
 }

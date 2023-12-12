@@ -14,7 +14,7 @@
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
         crossorigin="anonymous"></script>
     <script src="script/script.js"></script>
-    <x-links/>
+    <x-links />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
@@ -36,7 +36,6 @@
                             <button class='button_like' onclick="showAlert"></button>
                             <p>Слушать</p>
                         </div>
-                        <button class="button_points_like">• • •</button>
                     </div>
                 </div>
             </div>
@@ -44,41 +43,33 @@
     </section>
     <section>
         <div class="container releases">
-            
+            @php
+                $count = 0;
+            @endphp
             <div class="releases_track d-flex flex-column gap-4">
-                <div class="d-flex track align-items-center ">
-                    <div class="d-flex gap-5 align-items-center text_track">
-                        <span style="font-size: 40px;">1</span>
-                        <img src="/img/avaauth.svg">
-                        <span style="font-size: 24px;">Пустите меня на танцпол</span>
-                        <span style="font-size: 12px;">HammAli & Navai</span>
-                    </div>
-                    <div class="d-flex gap-2 align-items-center">
-                        <div class="button_border">
-                            <button class='button' onclick="showAlert"></button>
+                @forelse ($liked as $like)
+                    @php
+                        $count += 1;
+                    @endphp
+                    <div class="d-flex track align-items-center  justify-content-between px-3">
+                        <div class="d-flex gap-5 align-items-center text_track">
+                            <span style="font-size: 40px;">{{$count}}</span>
+                            <img src="/img/{{ $like->track->album->artist->profile_img }}">
+                            <span style="font-size: 24px;">{{ $like->track->title_track }}</span>
+                            <span style="font-size: 12px;">{{ $like->track->album->artist->artist_name }}</span>
                         </div>
-                        <button class="button_points">Лайк </button>
-                    </div>
-                </div>
-
-                <div class="d-flex track align-items-center ">
-                    <div class="d-flex gap-5 align-items-center text_track">
-                        <span style="font-size: 40px;">1</span>
-                        <img src="/img/avaauth.svg">
-                        <span style="font-size: 24px;">Пустите меня на танцпол</span>
-                        <span style="font-size: 12px;">HammAli & Navai</span>
-                    </div>
-                    <div class="d-flex gap-2 align-items-center">
-                        <div class="button_border d-flex align-items-center">
-                            <button class='button' onclick="showAlert"></button>
+                        <div class="d-flex gap-2 align-items-center">
+                            <div class="button_border">
+                                <button class='button' onclick="showAlert"></button>
+                            </div>
+                            <button class="button_points">Удалить </button>
                         </div>
-                        <button class="button_points">Лайк </button>
                     </div>
-                </div>
-
-
-
-
+                @empty
+                    <div class="d-flex align-items-center " style="color: white">
+                        <h1 class="px-3">Пусто</h1>
+                    </div>
+                @endforelse
 
             </div>
         </div>

@@ -39,7 +39,7 @@
             <div class="row row-cols-6 g-3">
                 @forelse ($genre as $genres)
                     <div class="col">
-                        <a href="/genres">
+                        <a href="/genres/{{$genres->id}}">
                             <div class="genres-card-index">
                                 <span>{{ $genres->title_genre }}</span>
                             </div>

@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\Album;
 use App\Models\Track;
 use App\Models\Genre;
+use App\Models\Playlist;
 use Illuminate\Support\Facades\Auth;
 
 class TrackController extends Controller
@@ -16,8 +17,8 @@ class TrackController extends Controller
     {
         $album = Album::find($id_album);
         $tracks = $album->tracks;
-
-        return view('playlist', ['album' => $album, 'track' => $tracks]);
+        $artist = $album->artist;
+        return view('playlist', ['album' => $album, 'track' => $tracks, 'artist' => $artist]);
     }
 
     public function addTracks(Request $request)
@@ -72,5 +73,34 @@ class TrackController extends Controller
             ]);
         }
         return redirect('/')->with('succes', 'Трек добавлен!');
+    }
+
+    public function LikeTrack(){
+        $id_user = Auth::user()->id;
+        $likes = Playlist::with(['track.album.artist', 'user'])->where('id_user', $id_user)->get();
+
+        return view('like', ['liked' => $likes]);
+    }
+
+    public function addLike($like){
+        $id_user = Auth::user()->id;
+        $existingLike = Playlist::where('id_user', $id_user)
+        ->where('id_track', $like)
+        ->first();
+
+    if ($existingLike) {
+        return redirect()->back()->with('error', 'Лайк уже существует');
+    }
+
+    $liked = Playlist::create([
+        'id_user' => $id_user,
+        'id_track' => $like,
+    ]);
+
+    return redirect()->back()->with('success', 'Лайк добавлен успешно');
+    }
+
+    public function genresShow($genre){
+
     }
 }

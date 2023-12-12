@@ -42,6 +42,11 @@ class User extends Authenticatable
 
     public function artists()
     {
-        return $this->hasMany(Artist::class, 'id_user', 'id');
+        return $this->hasOne(Artist::class, 'id_user', 'id');
+    }
+
+    public function playlists()
+    {
+        return $this->hasMany(Playlist::class, 'id_user');
     }
 }

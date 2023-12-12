@@ -59,7 +59,7 @@
         <div class="d-flex track align-items-center justify-content-between px-3">
             <div class="d-flex gap-5 align-items-center text_track ">
                 <span style="font-size: 40px;">{{$count}}</span>
-                <img src="/img/avaauth.svg">
+                <img src="/img/{{$artist->profile_img}}">
                 <span style="font-size: 24px;">{{$tracks->title_track}}</span>
                 <span style="font-size: 12px;">{{$tracks->album->artist->artist_name}}</span>
             </div>
@@ -67,7 +67,7 @@
                 <div class="button_border">
                     <button class='button'></button>
                 </div>
-                <button class="button_points">Лайк </button>
+                <a href="/like/{{{$tracks->id}}}" class="btn btn-outline-primary button_points">Лайк</a>
             </div>
         </div>
         @endforeach
