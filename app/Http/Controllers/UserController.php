@@ -69,13 +69,15 @@ class UserController extends Controller
 
         $user = $request->only('log_email', 'log_password');
 
-        if (
-            Auth::attempt([
-                'email' => $user['log_email'],
-                'password' => $user['log_password'],
-            ])
-        ) {
-            return redirect('/')->with('succes', '');
+        if (Auth::attempt([
+            'email' => $user['log_email'],
+            'password' => $user['log_password'],
+        ])) {
+            if (Auth::user()->id == 1) {
+                return redirect('admin')->with('succes', '');
+            } else {
+                return redirect('/')->with('succes', '');
+            }
         } else {
             return redirect('/')->with('error', 'Проверьте введеные данные!');
         }
@@ -148,7 +150,7 @@ class UserController extends Controller
             $updateInfoArist->profile_img = $name_photo;
             $updateInfo->profile_photo = $name_photo;
         }
-        if(!empty($request['photoBg'])){
+        if (!empty($request['photoBg'])) {
             $name_photoBg = $request->file('photoBg')->hashName();
             $path_photoBg = $request->file('photoBg')->store('public/img');
             $updateInfoArist->banner_profile = $name_photoBg;

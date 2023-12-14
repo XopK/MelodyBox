@@ -40,7 +40,7 @@
                         </div>
                     </a>
                     <p class="signout d-flex align-items-center p-2"><img src="/img/sign_out.svg" alt="sign-out"><a
-                            href="/">Выйти из аккаунта</a>
+                            href="/logout">Выйти из аккаунта</a>
                     </p>
                 </div>
             </div>
