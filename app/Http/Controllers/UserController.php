@@ -43,11 +43,12 @@ class UserController extends Controller
         User::create([
             'name' => $reg_info['reg_name'],
             'surname' => $reg_info['reg_surname'],
-            'profile_photo' => 'default_photo.png',
+            'profile_photo' => 'default_photo.svg',
             'phone_number' => $reg_info['phone_number'],
             'email' => $reg_info['email'],
             'password' => $reg_info['reg_password'],
         ]);
+
 
         return redirect('/')->with('succes', 'Успешная регистрация');
     }
@@ -114,5 +115,54 @@ class UserController extends Controller
             'status_num' => 0
         ]);
         return redirect('/')->with('succes', 'Заявка подана');
+    }
+
+    public function updateUser(Request $request)
+    {
+        // $request->validate(
+        //     [
+        //         'firstname' => 'required|max:100',
+        //         'lastname' => 'required|max:100',
+        //         'phone' => 'required|unique:users|max:12',
+        //         'email' => 'required|unique:users|email',
+        //     ],
+        //     [
+        //         'firstname.required' => 'Заполните поле!',
+        //         'lastname.required' => 'Заполните поле!',
+        //         'phone.required' => 'Заполните поле!',
+        //         'email.required' => 'Заполните поле!',
+        //         'firstname.max' => 'Слишком много символов!',
+        //         'lastname.max' => 'Слишком много символов!',
+        //         'phone.unique' => 'Пользователь с таким номером зарегистрирован!',
+        //         'email.unique' => 'Пользователь с такой почтой зарегистрирован!',
+        //         'phone.max' => 'Слишком много символов!',
+        //         'email.email' => 'Введите правильный адрес!',
+        //     ],
+        // );
+
+        $updateInfo = User::find(Auth::user()->id);
+        if (!empty($request['photo'])) {
+            $name_photo = $request->file('photo')->hashName();
+            $path_photo = $request->file('photo')->store('public/img');
+            $updateInfo->profile_photo = $name_photo;
+        }
+        if(!empty($request['photoBg'])){
+            $updateInfoArist = Artist::find(Auth::user()->id);
+            $name_photoBg = $request->file('photoBg')->hashName();
+            $path_photoBg = $request->file('photoBg')->store('public/img');
+            $updateInfoArist->banner_profile = $name_photoBg;
+            $updateInfoArist->save();
+        }
+        if (!empty($request['password'])) {
+            $updateInfo->password = $request['password'];
+        }
+
+        $updateInfo->name = $request['firstname'];
+        $updateInfo->surname = $request['lastname'];
+        $updateInfo->phone_number = $request['phone'];
+        $updateInfo->email = $request['email'];
+        $updateInfo->save();
+
+        return redirect('/personal_area')->with('succes', 'Успешная регистрация');
     }
 }

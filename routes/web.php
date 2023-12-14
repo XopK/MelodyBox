@@ -45,9 +45,10 @@ Route::get('/like',[TrackController::class, 'LikeTrack']);
 
 Route::get('/like/{like}',[TrackController::class, 'addLike']);
 
-Route::get('/personal_area', function () {
-    return view('personal_area');
-});
+Route::get('/personal_area', function () {return view('personal_area');});
+
+Route::post('/updateUser', [UserController::class, 'updateUser']);
+
 Route::post('/registration', [UserController::class, "registration"]);
 
 Route::post('/login', [UserController::class, "login"]);

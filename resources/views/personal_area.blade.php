@@ -27,44 +27,50 @@
                 <div class="bg-personal-area">
                     <div class="bg-personal-area-center">
                         <div class="bg-personal-area-left-img">
-                            <img src="/img/{{ Auth::user()->profile_photo }}" alt="preview" id="imagePreview">
+                            <img src="storage/img/{{ Auth::user()->profile_photo }}" alt="preview" id="imagePreview">
                         </div>
-                        <p>Егор Летов (Серный гриб)</p>
+                        <p>{{Auth::user()->name}} {{Auth::user()->surname}} @if(isset(Auth::user()->artists) && Auth::user()->artists->status_num == 1)({{Auth::user()->artists->artist_name}})@endif</p>
                     </div>
                 </div>
-                <form action="" method="POST" enctype="multipart/form-data">
+                <form action="/updateUser" method="POST" enctype="multipart/form-data">
+                    @csrf
                     <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3 personal-bottom-area">
                         <div class="col">
                             <label class="personal_form_label" for="firstname">Имя</label>
-                            <input class="personal_form_input" id="firstname" type="text" name="firstname">
+                            <input class="personal_form_input" value="{{Auth::user()->name}}" id="firstname" type="text" name="firstname">
                         </div>
                         <div class="col">
                             <label class="personal_form_label" for="lastname">Фамилия</label>
-                            <input class="personal_form_input" id="lastname" type="text" name="lastname">
+                            <input class="personal_form_input" value="{{Auth::user()->surname}}" id="lastname" type="text" name="lastname">
                         </div>
                         <div class="col">
                             <label class="personal_form_label" for="phone">Номер телефона</label>
-                            <input class="personal_form_input" id="phone" type="text" name="phone">
+                            <input class="personal_form_input" value="{{Auth::user()->phone_number}}" id="phone" type="text" name="phone">
                         </div>
                         <div class="col">
                             <label class="personal_form_label" for="email">Электронная почта</label>
-                            <input class="personal_form_input" id="email" type="email" name="email">
+                            <input class="personal_form_input" value="{{Auth::user()->email}}" id="email" type="email" name="email">
                         </div>
                         <div class="col">
                             <label class="personal_form_label" for="password">Пароль</label>
                             <input class="personal_form_input" id="password" type="password" name="password">
                         </div>
                         <div class="col">
-                            <label class="personal_form_label" for="artist_name">Псевдоним</label>
-                            <input class="personal_form_input" id="artist_name" type="password" name="artist_name">
-                        </div>
-                        <div class="col">
-                            <label class="personal_form_label" for="imageInput">Фото</label>
+                            <label class="personal_form_label" for="imageInput">Фото профиля</label>
                             <label for="imageInput" class="input_file-button">
                                 <input class="input_file" id="imageInput" name="photo" type="file">
                                 <span id="fileInfo">Выберите файл</span>
                             </label>
                         </div>
+                        @if(isset(Auth::user()->artists) && Auth::user()->artists->status_num == 1)
+                        <div class="col">
+                            <label class="personal_form_label" for="bgInput">Фон профиля</label>
+                            <label for="bgInput" class="input_file-button">
+                                <input class="input_file" id="bgInput" name="photoBg" type="file">
+                                <span id="fileInfoBg">Выберите файл</span>
+                            </label>
+                        </div>
+                        @endif
                     </div>
                     <div class="d-flex justify-content-center mt-4">
                         <button class="button-form">Изменить</button>
@@ -93,6 +99,17 @@
                 };
 
                 // Читаем содержимое файла как URL-адрес данных
+                reader.readAsDataURL(file);
+                }
+            });
+
+            $("#bgInput").change(function () {
+                var file = this.files[0];
+                if (file && file.type.startsWith("image/")) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $("#fileInfoBg").text(file.name);
+                };
                 reader.readAsDataURL(file);
                 }
             });
