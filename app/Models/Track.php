@@ -9,11 +9,9 @@ class Track extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title_track', 'track', 'id_album'];
+    protected $fillable = ['title_track', 'track', 'id_album', 'created_at', 'created_at'];
 
     protected $table = 'tracks';
-
-    public $timestamps = false;
 
     public function album()
     {

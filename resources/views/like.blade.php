@@ -31,12 +31,6 @@
                 <div class="text_like">
                     <span>Плейлист</span>
                     <h2 class="fw-bold">Мой плейлист</h2>
-                    <div class="d-flex gap-3">
-                        <div class="play_click d-flex ">
-                            <button class='button_like' onclick="showAlert"></button>
-                            <p>Слушать</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -51,20 +45,57 @@
                     @php
                         $count += 1;
                     @endphp
-                    <div class="d-flex track align-items-center  justify-content-between px-3">
-                        <div class="d-flex gap-5 align-items-center text_track">
-                            <span style="font-size: 40px;">{{$count}}</span>
-                            <img src="/img/{{ $like->track->album->artist->profile_img }}">
-                            <span style="font-size: 24px;">{{ $like->track->title_track }}</span>
-                            <span style="font-size: 12px;">{{ $like->track->album->artist->artist_name }}</span>
+                    <div id="audioPlayer">
+                        <audio  controls id="audio{{$count}}">
+                            <source src="/storage/tracks/{{$like->track->track}}">
+                        </audio>
+                    </div>
+                    <div class="block-track">
+                        <div class="block-track-left">
+                            <span>{{$count}}</span>
+                            <img src="/img/{{$like->track->album->artist->profile_img }}">
                         </div>
-                        <div class="d-flex gap-2 align-items-center">
-                            <div class="button_border">
-                                <button class='button' onclick="showAlert"></button>
+                        <div class="block-track-c-left">
+                            <span>{{$like->track->title_track}}</span>
+                            <span>{{$like->track->album->artist->artist_name}}</span>
+                        </div>
+                        <div class="block-track-c-right">
+                            <div class="time" id="time{{$count}}"></div>
+                        </div>
+                        <div class="block-track-right">
+                            <div class="d-flex justify-content-between">
+                                <button class="btn btn-danger button_points" id="playPause{{$count}}">Играть</button>
+                                @auth
+                                <a href="/like/{{{$like->track->id}}}" class="btn btn-danger button_points">Лайк</a>
+                                @endauth
                             </div>
-                            <button class="button_points">Удалить </button>
+                            <input type="range" id="volume{{$count}}" min="0" max="1" step="0.01" value="1">
                         </div>
                     </div>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            var audio = document.getElementById('audio{{$count}}');
+                            var volumeControl = document.getElementById('volume{{$count}}');
+                            var playPauseButton = document.getElementById('playPause{{$count}}');
+                            var time = document.getElementById('time{{$count}}');
+                            volumeControl.addEventListener('input', function () {
+                            audio.volume = volumeControl.value;
+                            });
+                            playPauseButton.addEventListener('click', function () {
+                            if (audio.paused) {
+                                audio.play();
+                                playPauseButton.textContent = 'Пауза';
+                                audioPlay = setInterval(function() {
+                                    let audioTime = Math.round(audio.currentTime);
+                                    let audioLength = Math.round(audio.duration)
+                                    time.style.width = (audioTime * 100) / audioLength + '%';});
+                            } else {
+                                audio.pause();
+                                playPauseButton.textContent = 'Играть';
+                            }
+                            });
+                        });
+                    </script>
                 @empty
                     <div class="d-flex align-items-center " style="color: white">
                         <h1 class="px-3">Пусто</h1>
@@ -79,14 +110,6 @@
 </body>
 
 <script src="script/script.js"></script>
-<script>
-    $(document).ready(function showAlert(btn) {
-        var btn = $(".button_like");
-        btn.click(function() {
-            btn.toggleClass("paused");
-            return false;
-        });
-    });
-</script>
+
 
 </html>

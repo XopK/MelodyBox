@@ -34,12 +34,7 @@
                         <h1>{{$album->title_album}}</h1>
                         <p>{{$album->artist->artist_name}}</p>
                         <p>{{$album->genre->title_genre}}</p>
-                        <div class="d-flex gap-3">
-                            <div class="play_click d-flex ">
-                                <button class='button_like' onclick="showAlert"></button>
-                                <p>Слушать</p>
-                            </div>
-                        </div>
+                       
                     </div>
                 </div>
             </div>
@@ -54,8 +49,8 @@
             $count += 1;
         @endphp
         <div id="audioPlayer">
-            <audio controls id="audio{{$count}}">
-                <source src="/music/play.mp3">
+            <audio  controls id="audio{{$count}}">
+                <source src="/storage/tracks/{{$tracks->track}}">
             </audio>
         </div>
         <div class="block-track">
@@ -72,8 +67,10 @@
             </div>
             <div class="block-track-right">
                 <div class="d-flex justify-content-between">
-                    <button class="btn btn-danger button_points" id="playPause{{$count}}">Play😆!</button>
+                    <button class="btn btn-danger button_points" id="playPause{{$count}}">Играть</button>
+                    @auth
                     <a href="/like/{{{$tracks->id}}}" class="btn btn-danger button_points">Лайк</a>
+                    @endauth
                 </div>
                 <input type="range" id="volume{{$count}}" min="0" max="1" step="0.01" value="1">
             </div>
@@ -90,14 +87,14 @@
                 playPauseButton.addEventListener('click', function () {
                 if (audio.paused) {
                     audio.play();
-                    playPauseButton.textContent = 'Pause😥';
+                    playPauseButton.textContent = 'Пауза';
                     audioPlay = setInterval(function() {
                         let audioTime = Math.round(audio.currentTime);
                         let audioLength = Math.round(audio.duration)
                         time.style.width = (audioTime * 100) / audioLength + '%';});
                 } else {
                     audio.pause();
-                    playPauseButton.textContent = 'Play😆!';
+                    playPauseButton.textContent = 'Играть';
                 }
                 });
             });

@@ -1121,3 +1121,6 @@ td {
 .block-track-right input{
     width: 100%;
 }
+#audioPlayer{
+    display: none
+}
