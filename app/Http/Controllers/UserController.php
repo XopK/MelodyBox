@@ -141,17 +141,17 @@ class UserController extends Controller
         // );
 
         $updateInfo = User::find(Auth::user()->id);
+        $updateInfoArist = Artist::find(Auth::user()->id);
         if (!empty($request['photo'])) {
             $name_photo = $request->file('photo')->hashName();
             $path_photo = $request->file('photo')->store('public/img');
+            $updateInfoArist->profile_img = $name_photo;
             $updateInfo->profile_photo = $name_photo;
         }
         if(!empty($request['photoBg'])){
-            $updateInfoArist = Artist::find(Auth::user()->id);
             $name_photoBg = $request->file('photoBg')->hashName();
             $path_photoBg = $request->file('photoBg')->store('public/img');
             $updateInfoArist->banner_profile = $name_photoBg;
-            $updateInfoArist->save();
         }
         if (!empty($request['password'])) {
             $updateInfo->password = $request['password'];
@@ -162,6 +162,7 @@ class UserController extends Controller
         $updateInfo->phone_number = $request['phone'];
         $updateInfo->email = $request['email'];
         $updateInfo->save();
+        $updateInfoArist->save();
 
         return redirect('/personal_area')->with('succes', 'Успешная регистрация');
     }

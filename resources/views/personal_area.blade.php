@@ -18,8 +18,10 @@
             <div class="persoanl-area-container-navigation">
                 <ul class="personal-nav-ul">
                     <a href="/personal_area"><li class="personal-nav p-n-first"><img src="/img/personal.svg" alt="personal.svg"> Персональные данные</li></a>
+                    @if(isset(Auth::user()->artists) && Auth::user()->artists->status_num == 1)
                     <a href="/album_create"><li class="personal-nav"><img src="/img/personal-plus.svg" alt="personal-plus.svg"> Добавить альбом</li></a>
-                    <li class="personal-nav p-n-last"><img src="/img/personal-exit.svg" alt="personal-exit.svg"> Выход из аккаунта</li>
+                    @endif
+                    <a href="/logout"><li class="personal-nav p-n-last"><img src="/img/personal-exit.svg" alt="personal-exit.svg"> Выход из аккаунта</li></a>
                 </ul>
             </div>
             <div id="change" class="personal-profile">
@@ -27,7 +29,7 @@
                 <div class="bg-personal-area">
                     <div class="bg-personal-area-center">
                         <div class="bg-personal-area-left-img">
-                            <img src="storage/img/{{ Auth::user()->profile_photo }}" alt="preview" id="imagePreview">
+                            <img src="/storage/img/{{ Auth::user()->profile_photo }}" alt="preview" id="imagePreview">
                         </div>
                         <p>{{Auth::user()->name}} {{Auth::user()->surname}} @if(isset(Auth::user()->artists) && Auth::user()->artists->status_num == 1)({{Auth::user()->artists->artist_name}})@endif</p>
                     </div>
@@ -55,6 +57,7 @@
                             <label class="personal_form_label" for="password">Пароль</label>
                             <input class="personal_form_input" id="password" type="password" name="password">
                         </div>
+                        @if(isset(Auth::user()->artists) && Auth::user()->artists->status_num == 1)
                         <div class="col">
                             <label class="personal_form_label" for="imageInput">Фото профиля</label>
                             <label for="imageInput" class="input_file-button">
@@ -62,7 +65,6 @@
                                 <span id="fileInfo">Выберите файл</span>
                             </label>
                         </div>
-                        @if(isset(Auth::user()->artists) && Auth::user()->artists->status_num == 1)
                         <div class="col">
                             <label class="personal_form_label" for="bgInput">Фон профиля</label>
                             <label for="bgInput" class="input_file-button">

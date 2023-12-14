@@ -25,9 +25,9 @@ crossorigin="anonymous"></script>
 
 
     <x-header/>
-    <section class="section_author" style="background-image: url('/img/{{$artist->banner_profile}}')">
+    <section class="section_author" style="background-image: url('/storage/img/{{$artist->banner_profile}}')">
         <div class="container cont-1">
-            <div class="name_author d-flex flex-column justify-content-center  gap-3"> <img src="/img/{{$artist->profile_img}}" alt="аватарка автора"> <p class="fw-bold">{{$artist->artist_name}}</p></div>
+            <div class="name_author d-flex flex-column justify-content-center  gap-3"> <img src="/storage/img/{{$artist->profile_img}}" alt="аватарка автора"> <p class="fw-bold">{{$artist->artist_name}}</p></div>
         </div>
     </section>
         <section>
@@ -50,7 +50,7 @@ crossorigin="anonymous"></script>
                     <div class="block-track">
                         <div class="block-track-left">
                             <span>{{$count}}</span>
-                            <img src="/img/{{$artist->profile_img}}">
+                            <img src="/storage/img/{{$artist->profile_img}}">
                         </div>
                         <div class="block-track-c-left">
                             <span>{{$track->title_track}}</span>
