@@ -115,4 +115,11 @@ class TrackController extends Controller
             ->get();
         return view('genres', ['genre' => $tracksWithGenre]);
     }
+
+    public function AuthorShow($author){
+        $artist = Artist::with('albums.tracks')->find($author);
+        $tracks = $artist->albums->flatMap->tracks->take(5);
+        $album = $artist->albums;
+        return view('author', ['artist' => $artist, 'tracks' => $tracks, 'albums' => $album]);
+    }
 }

@@ -25,9 +25,9 @@ crossorigin="anonymous"></script>
 
 
     <x-header/>
-    <section class="section_author">
+    <section class="section_author" style="background-image: url('/img/{{$artist->banner_profile}}')">
         <div class="container cont-1">
-            <div class="name_author d-flex flex-column justify-content-center  gap-3"> <img src="/img/avaauth.svg" alt="аватарка автора"> <p class="fw-bold">Имя автора </p></div>
+            <div class="name_author d-flex flex-column justify-content-center  gap-3"> <img src="/img/{{$artist->profile_img}}" alt="аватарка автора"> <p class="fw-bold">{{$artist->artist_name}}</p></div>
         </div>
     </section>
         <section>
@@ -35,38 +35,66 @@ crossorigin="anonymous"></script>
             <h2>Релизы</h2>
             <hr>
                 <div class="releases_track d-flex flex-column gap-4">
-                    <div class="d-flex track align-items-center ">
-                        <div class="d-flex gap-5 align-items-center text_track">
-                    <span style="font-size: 40px;">1</span>
-                    <img src="/img/avaauth.svg">
-                     <span style="font-size: 24px;">Пустите меня на танцпол</span>
-                     <span style="font-size: 12px;">HammAli & Navai</span>
+                    @php
+                    $count = 0;
+                    @endphp
+                    @foreach ($tracks as $track)
+                    @php
+                    $count += 1;
+                    @endphp
+                    <div id="audioPlayer">
+                        <audio  controls id="audio{{$count}}">
+                            <source src="/storage/tracks/{{$track->track}}">
+                        </audio>
+                    </div>
+                    <div class="block-track">
+                        <div class="block-track-left">
+                            <span>{{$count}}</span>
+                            <img src="/img/{{$artist->profile_img}}">
                         </div>
-                        <div class="d-flex gap-2 align-items-center">
-                            <div class="button_border">
-                        <button class='button'></button>
+                        <div class="block-track-c-left">
+                            <span>{{$track->title_track}}</span>
+                            <span>{{$track->album->artist->artist_name}}</span>
                         </div>
-                        <button class="button_points">Лайк </button>
+                        <div class="block-track-c-right">
+                            <div class="time" id="time{{$count}}"></div>
+                        </div>
+                        <div class="block-track-right">
+                            <div class="d-flex justify-content-between">
+                                <button class="btn btn-danger button_points" id="playPause{{$count}}">Играть</button>
+                                @auth
+                                <a href="/like/{{{$track->id}}}" class="btn btn-danger button_points">Лайк</a>
+                                @endauth
+                            </div>
+                            <input type="range" id="volume{{$count}}" min="0" max="1" step="0.01" value="1">
                         </div>
                     </div>
 
-                    <div class="d-flex track align-items-center ">
-                        <div class="d-flex gap-5 align-items-center text_track">
-                    <span style="font-size: 40px;">1</span>
-                    <img src="/img/avaauth.svg">
-                     <span style="font-size: 24px;">Пустите меня на танцпол</span>
-                     <span style="font-size: 12px;">HammAli & Navai</span>
-                        </div>
-                        <div class="d-flex gap-2 align-items-center">
-                            <div class="button_border">
-                        <button class='button'></button>
-                        </div>
-                        <button class="button_points">Лайк </button>
-                        </div>
-                    </div>
-
-
-
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            var audio = document.getElementById('audio{{$count}}');
+                            var volumeControl = document.getElementById('volume{{$count}}');
+                            var playPauseButton = document.getElementById('playPause{{$count}}');
+                            var time = document.getElementById('time{{$count}}');
+                            volumeControl.addEventListener('input', function () {
+                            audio.volume = volumeControl.value;
+                            });
+                            playPauseButton.addEventListener('click', function () {
+                            if (audio.paused) {
+                                audio.play();
+                                playPauseButton.textContent = 'Пауза';
+                                audioPlay = setInterval(function() {
+                                    let audioTime = Math.round(audio.currentTime);
+                                    let audioLength = Math.round(audio.duration)
+                                    time.style.width = (audioTime * 100) / audioLength + '%';});
+                            } else {
+                                audio.pause();
+                                playPauseButton.textContent = 'Играть';
+                            }
+                            });
+                        });
+                    </script>
+                    @endforeach
                 </div>
             </div>
         </section>
@@ -77,15 +105,17 @@ crossorigin="anonymous"></script>
                 <hr>
                     <div class="row row-cols-1 row-cols-xl-3 g-3">
                         <div class="col">
+                            @foreach ($albums as $albumD)
                             <div class="author-album">
-                                <a href="">
-                                    <img src="/img/habib.png" alt="">
+                                <a href="/playlist/{{$albumD->id}}">
+                                    <img src="/storage/albums/{{$albumD->album_banner}}" alt="{{$albumD->album_banner}}">
                                     <div class="author-album-text-block">
-                                        <p>Егор Летов</p>
-                                        <span>Вершки и корешки</span>
+                                        <p>{{$artist->artist_name}}</p>
+                                        <span>{{$albumD->title_album}}</span>
                                     </div>
                                 </a>
                             </div>
+                            @endforeach
                         </div>
                      
 

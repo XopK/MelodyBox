@@ -224,6 +224,7 @@ input::-webkit-search-results-decoration {
     background-image: url("/img/man-light-dark-concert-singer-darkness-61422-pxhere 1.svg");
     width: 100%;
     height: 390px;
+    background-size: cover;
 }
 
 .cont-1 {

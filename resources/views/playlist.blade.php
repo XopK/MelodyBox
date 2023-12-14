@@ -56,7 +56,7 @@
         <div class="block-track">
             <div class="block-track-left">
                 <span>{{$count}}</span>
-                <img src="/img/{{$artist->profile_img}}">
+               <a href="/author/{{$artist->id}}"><img src="/img/{{$artist->profile_img}}"></a> 
             </div>
             <div class="block-track-c-left">
                 <span>{{$tracks->title_track}}</span>
