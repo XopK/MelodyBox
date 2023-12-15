@@ -28,6 +28,9 @@
                     <a href="" class="nav-link text-white">Следите за нами в:</a>
                 </li>
                 <li class="nav-item">
+                    <a href="/sitemap" class="nav-link text-white" >Карта сайта</a>
+                </li>
+                <li class="nav-item">
                     <a href="" class="nav-link text-white"><img src="/img/Telegram.svg" alt="telegram"></a>
                 </li>
                 <li class="nav-item">

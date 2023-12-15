@@ -19,6 +19,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [IndexController::class, 'index']);
 
+Route::get('/sitemap', [IndexController::class, 'sitemap']);
+
 Route::get('/author/{author}', [TrackController::class, 'AuthorShow']);
 
 Route::get('admin', [AdminController::class, "index"]);

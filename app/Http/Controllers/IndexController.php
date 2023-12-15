@@ -17,4 +17,8 @@ class IndexController extends Controller
 
         return view('index', ['genre' => $genres, 'album' => $albums, 'release' => $latestTracks]);
     }
+
+    public function sitemap() {
+        return view ('sitemap');
+    }
 }
