@@ -4,7 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration {
+return new class extends Migration
+{
     /**
      * Run the migrations.
      */
@@ -13,10 +14,7 @@ return new class extends Migration {
         Schema::create('albums', function (Blueprint $table) {
             $table->id();
             $table->string('title_album');
-            $table
-                ->foreignId('id_artist')
-                ->references('id')
-                ->on('artists');
+            $table->foreignId('id_artist')->constrained('artists');
             $table->timestamps();
             $table->string('album_banner');
             $table

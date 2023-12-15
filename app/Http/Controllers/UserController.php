@@ -73,11 +73,8 @@ class UserController extends Controller
             'email' => $user['log_email'],
             'password' => $user['log_password'],
         ])) {
-            if (Auth::user()->id == 1) {
-                return redirect('admin')->with('succes', '');
-            } else {
-                return redirect('/')->with('succes', '');
-            }
+
+            return redirect('/')->with('succes', '');
         } else {
             return redirect('/')->with('error', 'Проверьте введеные данные!');
         }
