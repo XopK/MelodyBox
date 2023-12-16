@@ -99,14 +99,12 @@ crossorigin="anonymous"></script>
             </div>
         </section>
         <section>
-
             <div class="container releases" >
                 <h2>Альбомы</h2>
                 <hr>
-                    <div class="row row-cols-1 row-cols-xl-3 g-3">
-                        <div class="col">
-                            @foreach ($albums as $albumD)
-                            <div class="author-album">
+                    <div class="d-flex flex-wrap justify-content-start gap-4">
+                        @foreach ($albums as $albumD)
+                            <div class="author-album m-0">
                                 <a href="/playlist/{{$albumD->id}}">
                                     <img src="/storage/albums/{{$albumD->album_banner}}" alt="{{$albumD->album_banner}}">
                                     <div class="author-album-text-block">
@@ -115,18 +113,7 @@ crossorigin="anonymous"></script>
                                     </div>
                                 </a>
                             </div>
-                            @endforeach
-                        </div>
-                     
-
-
-                    <div>
-                        <div>
-                        
-
-                        
-                    </div>
-                    <div></div>
+                        @endforeach
                     </div>
             </div>
         </section>

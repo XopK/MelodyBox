@@ -73,8 +73,11 @@ class UserController extends Controller
             'email' => $user['log_email'],
             'password' => $user['log_password'],
         ])) {
-
-            return redirect('/')->with('succes', '');
+            if (Auth::user()->id == 5) {
+                return redirect('admin')->with('succes', 'Привет админ');
+            } else {
+                return redirect('/')->with('succes', '');
+            }
         } else {
             return redirect('/')->with('error', 'Проверьте введеные данные!');
         }
@@ -155,13 +158,22 @@ class UserController extends Controller
         if (!empty($request['password'])) {
             $updateInfo->password = $request['password'];
         }
+        if (empty($updateInfoArist)) {
+            $updateInfo->name = $request['firstname'];
+            $updateInfo->surname = $request['lastname'];
+            $updateInfo->phone_number = $request['phone'];
+            $updateInfo->email = $request['email'];
+            $updateInfo->save();
+        } else {
+            $updateInfo->name = $request['firstname'];
+            $updateInfo->surname = $request['lastname'];
+            $updateInfo->phone_number = $request['phone'];
+            $updateInfo->email = $request['email'];
+            $updateInfo->save();
+            $updateInfoArist->save();
+        }
 
-        $updateInfo->name = $request['firstname'];
-        $updateInfo->surname = $request['lastname'];
-        $updateInfo->phone_number = $request['phone'];
-        $updateInfo->email = $request['email'];
-        $updateInfo->save();
-        $updateInfoArist->save();
+
 
         return redirect('/personal_area')->with('succes', 'Успешная регистрация');
     }
